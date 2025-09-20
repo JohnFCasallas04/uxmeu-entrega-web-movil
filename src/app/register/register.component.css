@@ -1,0 +1,376 @@
+* {
+  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display para todo */
+}
+
+/* ← Botón de navegación hacia atrás */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.back-btn:hover {
+  background: rgba(107, 114, 128, 0.1);
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-body);
+  transition: color var(--transition-fast);
+}
+
+.back-btn:hover .back-icon {
+  color: var(--color-primary);
+}
+
+/* 🎨 Header de autenticación */
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.auth-title {
+  font-size: var(--text-5xl) !important; /* 48px forzado */
+  font-family: var(--font-main); /* ADLaM Display */
+  color: var(--color-primary); /* Color principal */
+  margin-bottom: var(--spacing-sm);
+  font-weight: 400;
+}
+
+.auth-subtitle {
+  font-size: var(--text-lg);
+  font-family: var(--font-main); /* ADLaM Display */
+  color: var(--color-body);
+  margin: 0;
+}
+
+/* 📝 Formulario */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center; /* Centrar horizontalmente todos los elementos del formulario */
+}
+
+/* 📝 Material 3 Input Fields */
+.input-field {
+  position: relative;
+  margin-bottom: var(--spacing-md); /* Reducido de var(--spacing-lg) a var(--spacing-md) */
+}
+
+.form-input {
+  width: 312px; /* Ancho específico 312px */
+  height: 56px; /* Altura específica 56px */
+  padding: 16px 48px 16px 16px; /* Espacio adicional a la derecha para el botón */
+  border: 2px solid var(--color-accent); /* Borde usando color-accent */
+  border-radius: var(--border-radius-sm); /* Más cuadrado */
+  font-size: var(--text-base); /* 16px para input y placeholder */
+  font-family: var(--font-main);
+  background: var(--color-background); /* Fondo usando variable */
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: var(--color-placeholder-light); /* Color del placeholder con 25% transparencia */
+  font-size: var(--text-base); /* 16px para placeholder */
+}
+
+.form-label {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: var(--text-base); /* 16px */
+  color: var(--color-body); /* Color del label usando variable */
+  font-family: var(--font-main);
+  background: var(--color-background); /* Fondo del label usando variable */
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+}
+
+/* Estados del input - Solo cambio de color */
+.form-input:focus + .form-label {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* 🗑️ Botón de limpiar input */
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-accent); /* Borde color accent */
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+.clear-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.clear-btn:hover {
+  background: var(--color-accent); /* Fondo color accent en hover */
+  color: var(--color-white);
+}
+
+.clear-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent); /* Color accent */
+  transition: color 0.2s ease-in-out;
+}
+
+.clear-btn:hover .clear-icon {
+  color: var(--color-white);
+}
+
+/* 🎛 Opciones del formulario */
+.form-options {
+  display: flex;
+  justify-content: center; /* Centrar el enlace */
+  align-items: center;
+  margin: 8px 0 var(--spacing-md) 0; /* Margen superior reducido */
+  width: 100%;
+  text-align: center;
+}
+
+.form-options span {
+  margin: 0 auto; /* Centrar el span */
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.checkbox-label {
+  font-size: var(--text-sm);
+  color: var(--color-body);
+  user-select: none;
+}
+
+.forgot-link {
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+  display: inline; /* Solo el texto es clickeable */
+}
+
+.forgot-link:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* 🎯 Botón principal */
+.btn-full {
+  width: 278px; /* Ancho específico 278px */
+  height: 50px; /* Altura específica 50px */
+  font-size: var(--text-2xl); /* 24px */
+  font-weight: 500;
+  margin-top: var(--spacing-lg);
+}
+
+/* 🔗 Footer de autenticación */
+.auth-footer {
+  text-align: center;
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid rgba(107, 114, 128, 0.1);
+}
+
+.auth-footer p {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.auth-footer a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* 🎭 Panel de información */
+.auth-info {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4xl);
+  color: var(--color-white);
+}
+
+.info-content {
+  max-width: 400px;
+  text-align: center;
+}
+
+.info-content h2 {
+  color: var(--color-white);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 400;
+}
+
+.info-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* 🌟 Lista de características */
+.feature-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.feature-icon {
+  font-size: var(--text-xl);
+  width: 32px;
+  text-align: center;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1024px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .auth-info {
+    order: -1;
+    padding: var(--spacing-3xl) var(--spacing-xl);
+  }
+  
+  .info-content h2 {
+    font-size: var(--text-2xl);
+  }
+  
+  .info-content p {
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-card {
+    padding: var(--spacing-xl);
+  }
+  
+  .auth-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .form-options {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+  
+  .feature-list {
+    gap: var(--spacing-md);
+  }
+  
+  .feature-item {
+    font-size: var(--text-sm);
+  }
+}
+
+/* ⚡ Animaciones */
+.auth-card {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.auth-info {
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* 🎯 Estados de focus mejorados */
+.form-input:focus,
+.checkbox:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 🌟 Hover effects */
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}

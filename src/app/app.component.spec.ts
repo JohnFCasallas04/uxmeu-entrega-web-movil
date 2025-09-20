@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'FetivAlarm'`, () => {
+  it(`should have as title 'FestivAlarm'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('FetivAlarm');
+    expect(app.title).toEqual('FestivAlarm');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('FetivAlarm app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('FestivAlarm app is running!');
   });
 });

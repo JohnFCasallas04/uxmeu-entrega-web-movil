@@ -1,0 +1,234 @@
+* {
+  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display para todo */
+}
+
+/* 🏠 Contenedor principal del menú */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: var(--spacing-xl);
+  background: var(--color-background);
+}
+
+/* 📦 Card principal del menú */
+.menu-card {
+  width: 1200px;
+  height: 610px;
+  background: var(--color-white);
+  border: 2px solid var(--color-primary); /* Borde color principal #5C86D6 */
+  border-radius: 0; /* Sin bordes redondos */
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-xl);
+  box-sizing: border-box;
+}
+
+/* 🎨 Header del menú */
+.menu-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.menu-title {
+  font-size: var(--text-5xl) !important; /* 48px igual que otros títulos */
+  font-family: var(--font-main); /* ADLaM Display */
+  color: var(--color-primary); /* Color principal */
+  margin: 0;
+  font-weight: 400;
+}
+
+/* 📋 Contenido principal del menú */
+.menu-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+/* 🎯 Opciones del menú */
+.menu-options {
+  display: flex;
+  gap: var(--spacing-4xl); /* Espaciado entre opciones */
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🔘 Opción individual del menú */
+.menu-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: all var(--transition-normal);
+  padding: var(--spacing-lg);
+  border-radius: var(--border-radius-lg);
+}
+
+.menu-option:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* 🖼️ Placeholder para imágenes */
+.option-image-placeholder {
+  margin-bottom: var(--spacing-lg);
+}
+
+.image-placeholder {
+  width: 230px;
+  height: 230px;
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-lg);
+  color: var(--color-white);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+/* 🎨 Colores específicos para cada placeholder */
+.account-image {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+}
+
+.account-image::after {
+  content: 'Gestionar\aCuenta';
+  white-space: pre;
+  text-align: center;
+}
+
+.groups-image {
+  background: linear-gradient(135deg, var(--color-accent), #4ECDC4);
+}
+
+.groups-image::after {
+  content: 'Gestionar\aGrupos\aFamiliares';
+  white-space: pre;
+  text-align: center;
+}
+
+.calendar-image {
+  background: linear-gradient(135deg, #FF6B6B, #FFE66D);
+}
+
+.calendar-image::after {
+  content: 'Gestionar\aCalendario';
+  white-space: pre;
+  text-align: center;
+}
+
+/* 🏷️ Títulos de las opciones */
+.option-title {
+  font-size: var(--text-xl); /* 20px como solicitado */
+  font-family: var(--font-main); /* ADLaM Display */
+  color: var(--color-primary); /* Color principal */
+  margin: 0;
+  text-align: center;
+  font-weight: 400;
+  transition: color var(--transition-fast);
+}
+
+.menu-option:hover .option-title {
+  color: var(--color-secondary);
+}
+
+/* 🚪 Footer del menú */
+.menu-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+}
+
+/* 🚨 Botón de salida */
+.btn-exit {
+  width: 278px; /* Mismo ancho que otros botones */
+  height: 50px; /* Misma altura que otros botones */
+  font-size: var(--text-2xl); /* 24px */
+  font-weight: 500;
+}
+
+.btn-alert {
+  background: var(--color-alert);
+  color: var(--color-white);
+  border: 2px solid var(--color-alert);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-alert:hover {
+  background: #D73E47; /* Color alert más oscuro */
+  border-color: #D73E47;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 1280px) {
+  .menu-card {
+    width: 95%;
+    height: auto;
+    min-height: 610px;
+  }
+  
+  .menu-options {
+    gap: var(--spacing-2xl);
+  }
+  
+  .image-placeholder {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-options {
+    flex-direction: column;
+    gap: var(--spacing-xl);
+  }
+  
+  .image-placeholder {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .menu-title {
+    font-size: var(--text-3xl) !important;
+  }
+  
+  .option-title {
+    font-size: var(--text-lg);
+  }
+}
+
+/* ⚡ Animaciones */
+.menu-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🎯 Estados de focus mejorados */
+.menu-option:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.btn-alert:focus {
+  outline: 2px solid var(--color-alert);
+  outline-offset: 2px;
+}

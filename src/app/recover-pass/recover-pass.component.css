@@ -1,0 +1,173 @@
+* {
+  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display para todo */
+}
+
+/* ← Botón de navegación hacia atrás */
+.back-btn {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.back-btn:hover {
+  background: rgba(107, 114, 128, 0.1);
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-body);
+  transition: color var(--transition-fast);
+}
+
+.back-btn:hover .back-icon {
+  color: var(--color-primary);
+}
+
+/* 🎨 Header de autenticación */
+.auth-header {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.auth-title {
+  font-size: var(--text-5xl) !important; /* 48px forzado */
+  font-family: var(--font-main); /* ADLaM Display */
+  color: var(--color-primary); /* Color principal */
+  margin-bottom: var(--spacing-sm);
+  font-weight: 400;
+}
+
+/* 📝 Formulario */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  align-items: center; /* Centrar horizontalmente todos los elementos del formulario */
+}
+
+/* 📝 Material 3 Input Fields */
+.input-field {
+  position: relative;
+  margin-bottom: var(--spacing-md); /* Reducido de var(--spacing-lg) a var(--spacing-md) */
+}
+
+.form-input {
+  width: 312px; /* Ancho específico 312px */
+  height: 56px; /* Altura específica 56px */
+  padding: 16px 48px 16px 16px; /* Espacio adicional a la derecha para el botón */
+  border: 2px solid var(--color-accent); /* Borde usando color-accent */
+  border-radius: var(--border-radius-sm); /* Más cuadrado */
+  font-size: var(--text-base); /* 16px para input y placeholder */
+  font-family: var(--font-main);
+  background: var(--color-background); /* Fondo usando variable */
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: var(--color-placeholder-light); /* Color del placeholder con 25% transparencia */
+  font-size: var(--text-base); /* 16px para placeholder */
+}
+
+.form-label {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: var(--text-base); /* 16px */
+  color: var(--color-body); /* Color del label usando variable */
+  font-family: var(--font-main);
+  background: var(--color-background); /* Fondo del label usando variable */
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+}
+
+/* Estados del input - Solo cambio de color */
+.form-input:focus + .form-label {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* 🗑️ Botón de limpiar input */
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-accent); /* Borde color accent */
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+.clear-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.clear-btn:hover {
+  background: var(--color-accent); /* Fondo color accent en hover */
+  color: var(--color-white);
+}
+
+.clear-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent); /* Color accent */
+  transition: color 0.2s ease-in-out;
+}
+
+.clear-btn:hover .clear-icon {
+  color: var(--color-white);
+}
+
+/* 🎯 Botón principal */
+.btn-full {
+  width: 278px; /* Ancho específico 278px */
+  height: 50px; /* Altura específica 50px */
+  font-size: var(--text-2xl); /* 24px */
+  font-weight: 500;
+  margin-top: var(--spacing-lg);
+}
+
+/* 🎯 Estados de focus mejorados */
+.form-input:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* 🌟 Hover effects */
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}

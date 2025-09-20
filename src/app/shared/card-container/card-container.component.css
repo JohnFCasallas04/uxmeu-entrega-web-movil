@@ -1,0 +1,40 @@
+/* 📦 Card Container Reutilizable - 546x610 */
+.card-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 546px 1fr;
+  grid-template-rows: 160px 610px 1fr;
+  background: var(--color-white); /* Blanco puro */
+}
+
+.card {
+  grid-column: 2;
+  grid-row: 2;
+  width: 546px;
+  height: 610px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--spacing-3xl);
+  background: var(--color-background); /* #F7F9FB */
+  border: 2px solid var(--color-primary); /* Borde #5C86D6 */
+  border-radius: 0; /* Sin bordes redondos */
+  box-shadow: var(--shadow-xl);
+  overflow-y: auto;
+}
+
+/* 🎨 Estilos Globales para el Contenido del Card */
+::ng-deep .auth-title {
+  font-size: var(--text-5xl); /* 48px */
+  font-family: var(--font-main); /* ADLaM Display */
+  font-weight: 400; /* Regular */
+  color: var(--color-primary); /* #5C86D6 */
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+/* 🔤 Tipografía Global - ADLaM Display para todo el contenido */
+::ng-deep .card * {
+  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display para todo */
+}

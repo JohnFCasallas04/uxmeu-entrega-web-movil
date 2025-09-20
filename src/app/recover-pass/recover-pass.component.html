@@ -1,0 +1,31 @@
+<app-card-container>
+  <button type="button" class="back-btn" (click)="navigateBack()">
+    <svg class="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12 19L5 12L12 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </button>
+  
+  <header class="auth-header">
+    <h1 class="auth-title">{{labels[0]?.TituloRecuperarContrasena}}</h1>    
+  </header>
+
+  <form class="auth-form">
+    <div class="input-field">
+      <input type="email" id="correo" class="form-input" placeholder="{{labels[0]?.PlaceholderCorreo}}" required 
+             (input)="onInputChange($event, 'correo')">
+      <label for="correo" class="form-label">{{labels[0]?.InputCorreo}}</label>
+      <button type="button" class="clear-btn" (click)="clearInput('correo')" [class.visible]="correoValue">
+        <svg class="clear-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-full">
+      {{labels[0]?.BotonRecuperar}}
+    </button>
+  </form>
+  
+</app-card-container>
