@@ -9,18 +9,18 @@ import Labels from '../../assets/labels.json';
 })
 export class AuthComponent {
   labels: any = Labels;
-  emailValue: string = '';
+  usuarioValue: string = '';
   passwordValue: string = '';
 
   constructor(private router: Router) {}
 
   clearInput(inputType: string): void {
-    if (inputType === 'email') {
-      this.emailValue = '';
-      const emailInput = document.getElementById('email') as HTMLInputElement;
-      if (emailInput) {
-        emailInput.value = '';
-        emailInput.focus();
+    if (inputType === 'usuario') {
+      this.usuarioValue = '';
+      const usuarioInput = document.getElementById('usuario') as HTMLInputElement;
+      if (usuarioInput) {
+        usuarioInput.value = '';
+        usuarioInput.focus();
       }
     } else if (inputType === 'password') {
       this.passwordValue = '';
@@ -33,8 +33,8 @@ export class AuthComponent {
   }
 
   onInputChange(event: any, inputType: string): void {
-    if (inputType === 'email') {
-      this.emailValue = event.target.value;
+    if (inputType === 'usuario') {
+      this.usuarioValue = event.target.value;
     } else if (inputType === 'password') {
       this.passwordValue = event.target.value;
     }

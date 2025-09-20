@@ -1,14 +1,14 @@
 * {
-  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display para todo */
+  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display for all elements */
 }
 
-/* ← Botón de navegación hacia atrás */
+/* Back navigation button */
 .back-btn {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 40px;
-  height: 40px;
+  top: 5px; /* 5px desde el top del card */
+  left: 6px; /* 6px desde el left del card */
+  width: 40px; /* Tamaño exacto solicitado */
+  height: 40px; /* Tamaño exacto solicitado */
   border: none;
   background: transparent;
   cursor: pointer;
@@ -35,57 +35,101 @@
   color: var(--color-primary);
 }
 
-/* 🎨 Header de autenticación */
+/* Authentication header */
 .auth-header {
+  position: absolute;
+  top: 0;
+  left: 0;
   text-align: center;
-  margin-bottom: var(--spacing-xl);
+  margin: 0;
+  padding: 0;
+  z-index: 5;
 }
 
 .auth-title {
-  font-size: var(--text-5xl) !important; /* 48px forzado */
+  position: absolute;
+  top: 80px; /* Absolute coordinate on card */
+  left: 120px; /* Absolute coordinate on card */
+  width: 306px;
+  font-size: var(--text-5xl) !important; /* Forced 48px */
   font-family: var(--font-main); /* ADLaM Display */
-  color: var(--color-primary); /* Color principal */
-  margin-bottom: var(--spacing-sm);
+  color: var(--color-primary); /* Primary color */
+  margin: 0;
+  padding: 0;
   font-weight: 400;
+  text-align: center;
 }
 
 .auth-subtitle {
+  position: absolute;
+  top: 140px; /* Absolute coordinate on card */
+  left: 120px; /* Absolute coordinate on card */
+  width: 306px;
   font-size: var(--text-lg);
   font-family: var(--font-main); /* ADLaM Display */
   color: var(--color-body);
   margin: 0;
+  text-align: center;
 }
 
-/* 📝 Formulario */
+/* Form container */
 .auth-form {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-md);
-  align-items: center; /* Centrar horizontalmente todos los elementos del formulario */
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
 }
 
-/* 📝 Material 3 Input Fields */
+/* Material 3 input fields with absolute positioning */
 .input-field {
-  position: relative;
-  margin-bottom: var(--spacing-md); /* Reducido de var(--spacing-lg) a var(--spacing-md) */
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+/* Names input field coordinates */
+.nombres-field {
+  top: 117px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+}
+
+/* Last names input field coordinates */
+.apellidos-field {
+  top: 200px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+}
+
+/* Email input field coordinates */
+.correo-field {
+  top: 283px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+}
+
+/* Password input field coordinates */
+.password-field {
+  top: 366px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
 }
 
 .form-input {
-  width: 312px; /* Ancho específico 312px */
-  height: 56px; /* Altura específica 56px */
-  padding: 16px 48px 16px 16px; /* Espacio adicional a la derecha para el botón */
-  border: 2px solid var(--color-accent); /* Borde usando color-accent */
-  border-radius: var(--border-radius-sm); /* Más cuadrado */
-  font-size: var(--text-base); /* 16px para input y placeholder */
+  width: 312px; /* Specific 312px width */
+  height: 56px; /* Specific 56px height */
+  padding: 16px 48px 16px 16px; /* Extra space on right for clear button */
+  border: 2px solid var(--color-accent); /* Border using accent color */
+  border-radius: var(--border-radius-sm); /* Square appearance */
+  font-size: var(--text-base); /* 16px for input and placeholder */
   font-family: var(--font-main);
-  background: var(--color-background); /* Fondo usando variable */
+  background: var(--color-background); /* Background using variable */
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
 }
 
 .form-input::placeholder {
-  color: var(--color-placeholder-light); /* Color del placeholder con 25% transparencia */
-  font-size: var(--text-base); /* 16px para placeholder */
+  color: var(--color-placeholder-light); /* Placeholder color with 25% transparency */
+  font-size: var(--text-base); /* 16px for placeholder */
 }
 
 .form-label {
@@ -94,16 +138,16 @@
   top: 0;
   transform: translateY(-50%);
   font-size: var(--text-base); /* 16px */
-  color: var(--color-body); /* Color del label usando variable */
+  color: var(--color-body); /* Label color using variable */
   font-family: var(--font-main);
-  background: var(--color-background); /* Fondo del label usando variable */
+  background: var(--color-background); /* Label background using variable */
   padding: 0 4px;
   pointer-events: none;
   transition: all 0.2s ease-in-out;
   font-weight: 400;
 }
 
-/* Estados del input - Solo cambio de color */
+/* Input focus states - Color change only */
 .form-input:focus + .form-label {
   color: var(--color-primary);
   font-weight: 500;
@@ -115,7 +159,7 @@
   box-shadow: 0 0 0 1px var(--color-primary);
 }
 
-/* 🗑️ Botón de limpiar input */
+/* Clear input button */
 .clear-btn {
   position: absolute;
   right: 12px;
@@ -123,7 +167,7 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  border: 2px solid var(--color-accent); /* Borde color accent */
+  border: 2px solid var(--color-accent); /* Accent color border */
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
@@ -143,14 +187,14 @@
 }
 
 .clear-btn:hover {
-  background: var(--color-accent); /* Fondo color accent en hover */
+  background: var(--color-accent); /* Accent color background on hover */
   color: var(--color-white);
 }
 
 .clear-icon {
   width: 16px;
   height: 16px;
-  color: var(--color-accent); /* Color accent */
+  color: var(--color-accent); /* Accent color */
   transition: color 0.2s ease-in-out;
 }
 
@@ -158,25 +202,33 @@
   color: var(--color-white);
 }
 
-/* 🎛 Opciones del formulario */
+/* Form options */
 .form-options {
+  position: absolute;
+  top: 430px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+  width: 312px;
   display: flex;
-  justify-content: center; /* Centrar el enlace */
+  justify-content: center; /* Center the link */
   align-items: center;
-  margin: 8px 0 var(--spacing-md) 0; /* Margen superior reducido */
-  width: 100%;
+  margin: 0; /* Remove margins for absolute positioning */
   text-align: center;
+  z-index: 5;
 }
 
 .form-options span {
-  margin: 0 auto; /* Centrar el span */
+  margin: 0 auto; /* Center the span */
 }
 
 .checkbox-container {
+  position: absolute;
+  top: 435px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
   display: flex;
   align-items: center;
   gap: var(--spacing-sm);
   cursor: pointer;
+  z-index: 5;
 }
 
 .checkbox {
@@ -192,12 +244,16 @@
 }
 
 .forgot-link {
+  position: absolute;
+  top: 440px; /* Absolute coordinate on card */
+  left: 250px; /* Absolute coordinate on card */
   font-size: var(--text-sm);
   color: var(--color-primary);
   text-decoration: none;
   transition: color var(--transition-fast);
   cursor: pointer;
   display: inline; /* Solo el texto es clickeable */
+  z-index: 5;
 }
 
 .forgot-link:hover {
@@ -205,21 +261,30 @@
   text-decoration: underline;
 }
 
-/* 🎯 Botón principal */
+/* Primary button */
 .btn-full {
-  width: 278px; /* Ancho específico 278px */
-  height: 50px; /* Altura específica 50px */
+  position: absolute;
+  top: 467px; /* Absolute coordinate on card */
+  left: 134px; /* Absolute coordinate on card */
+  width: 278px; /* Specific 278px width */
+  height: 50px; /* Specific 50px height */
   font-size: var(--text-2xl); /* 24px */
   font-weight: 500;
-  margin-top: var(--spacing-lg);
+  margin: 0;
+  z-index: 10;
 }
 
-/* 🔗 Footer de autenticación */
+/* Authentication footer */
 .auth-footer {
+  position: absolute;
+  top: 550px; /* Absolute coordinate on card */
+  left: 50px; /* Absolute coordinate on card */
+  width: 446px; /* Card width minus padding */
   text-align: center;
-  margin-top: var(--spacing-xl);
-  padding-top: var(--spacing-lg);
+  margin: 0; /* Remove margins for absolute positioning */
+  padding: var(--spacing-lg) 0 0 0; /* Only top padding */
   border-top: 1px solid rgba(107, 114, 128, 0.1);
+  z-index: 5;
 }
 
 .auth-footer p {
@@ -236,17 +301,27 @@
   text-decoration: underline;
 }
 
-/* 🎭 Panel de información */
+/* Information panel */
 .auth-info {
+  position: absolute;
+  top: 0; /* Absolute coordinate on card */
+  left: 0; /* Absolute coordinate on card */
+  width: 100%;
+  height: 100%;
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   display: flex;
   align-items: center;
   justify-content: center;
   padding: var(--spacing-4xl);
   color: var(--color-white);
+  z-index: 1;
 }
 
 .info-content {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect center */
   max-width: 400px;
   text-align: center;
 }
@@ -265,14 +340,19 @@
   margin-bottom: var(--spacing-3xl);
 }
 
-/* 🌟 Lista de características */
+/* Feature list */
 .feature-list {
+  position: absolute;
+  top: 200px; /* Absolute coordinate within info panel */
+  left: 50px; /* Absolute coordinate within info panel */
+  width: 300px;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-lg);
 }
 
 .feature-item {
+  position: relative; /* Relative to feature-list */
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -281,12 +361,14 @@
 }
 
 .feature-icon {
+  position: absolute;
+  left: 0; /* Absolute positioning within feature-item */
   font-size: var(--text-xl);
   width: 32px;
   text-align: center;
 }
 
-/* 📱 Responsive Design */
+/* Responsive design */
 @media (max-width: 1024px) {
   .auth-container {
     grid-template-columns: 1fr;
@@ -331,7 +413,7 @@
   }
 }
 
-/* ⚡ Animaciones */
+/* Animations */
 .auth-card {
   animation: slideInLeft 0.6s ease-out;
 }
@@ -362,14 +444,14 @@
   }
 }
 
-/* 🎯 Estados de focus mejorados */
+/* Enhanced focus states */
 .form-input:focus,
 .checkbox:focus {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
 }
 
-/* 🌟 Hover effects */
+/* Hover effects */
 .btn-primary:hover {
   transform: translateY(-1px);
   box-shadow: var(--shadow-lg);

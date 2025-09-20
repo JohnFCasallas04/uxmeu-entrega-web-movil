@@ -1,14 +1,14 @@
 * {
-  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display para todo */
+  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display for all elements */
 }
 
-/* ← Botón de navegación hacia atrás */
+/* Back navigation button */
 .back-btn {
   position: absolute;
-  top: 16px;
-  left: 16px;
-  width: 40px;
-  height: 40px;
+  top: 5px; /* Absolute coordinate on card */
+  left: 6px; /* Absolute coordinate on card */
+  width: 40px; /* Exact requested size */
+  height: 40px; /* Exact requested size */
   border: none;
   background: transparent;
   cursor: pointer;
@@ -35,50 +35,74 @@
   color: var(--color-primary);
 }
 
-/* 🎨 Header de autenticación */
+/* Authentication header */
 .auth-header {
-  text-align: center;
-  margin-bottom: var(--spacing-xl);
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
 }
 
 .auth-title {
-  font-size: var(--text-5xl) !important; /* 48px forzado */
-  font-family: var(--font-main); /* ADLaM Display */
-  color: var(--color-primary); /* Color principal */
-  margin-bottom: var(--spacing-sm);
-  font-weight: 400;
-}
-
-/* 📝 Formulario */
-.auth-form {
+  position: absolute;
+  top: 117px; /* Absolute coordinate on card */
+  left: 14px; /* Absolute coordinate on card */
   display: flex;
+  width: 519px;
+  height: 59px;
   flex-direction: column;
-  gap: var(--spacing-md);
-  align-items: center; /* Centrar horizontalmente todos los elementos del formulario */
+  justify-content: center;
+  flex-shrink: 0;
+  color: var(--color-principal, #5C86D6);
+  text-align: center;
+  font-family: "ADLaM Display";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  white-space: pre-line;
+  margin: 0;
+  padding: 0;
 }
 
-/* 📝 Material 3 Input Fields */
+/* Form container */
+.auth-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+/* Material 3 input fields with absolute positioning */
 .input-field {
-  position: relative;
-  margin-bottom: var(--spacing-md); /* Reducido de var(--spacing-lg) a var(--spacing-md) */
+  position: absolute;
+  top: 277px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+  margin: 0;
+  padding: 0;
+  z-index: 5;
 }
 
 .form-input {
-  width: 312px; /* Ancho específico 312px */
-  height: 56px; /* Altura específica 56px */
-  padding: 16px 48px 16px 16px; /* Espacio adicional a la derecha para el botón */
-  border: 2px solid var(--color-accent); /* Borde usando color-accent */
-  border-radius: var(--border-radius-sm); /* Más cuadrado */
-  font-size: var(--text-base); /* 16px para input y placeholder */
+  width: 312px; /* Specific 312px width */
+  height: 56px; /* Specific 56px height */
+  padding: 16px 48px 16px 16px; /* Extra space on right for clear button */
+  border: 2px solid var(--color-accent); /* Border using accent color */
+  border-radius: var(--border-radius-sm); /* Square appearance */
+  font-size: var(--text-base); /* 16px for input and placeholder */
   font-family: var(--font-main);
-  background: var(--color-background); /* Fondo usando variable */
+  background: var(--color-background); /* Background using variable */
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
 }
 
 .form-input::placeholder {
-  color: var(--color-placeholder-light); /* Color del placeholder con 25% transparencia */
-  font-size: var(--text-base); /* 16px para placeholder */
+  color: var(--color-placeholder-light); /* Placeholder color with 25% transparency */
+  font-size: var(--text-base); /* 16px for placeholder */
 }
 
 .form-label {
@@ -87,16 +111,16 @@
   top: 0;
   transform: translateY(-50%);
   font-size: var(--text-base); /* 16px */
-  color: var(--color-body); /* Color del label usando variable */
+  color: var(--color-body); /* Label color using variable */
   font-family: var(--font-main);
-  background: var(--color-background); /* Fondo del label usando variable */
+  background: var(--color-background); /* Label background using variable */
   padding: 0 4px;
   pointer-events: none;
   transition: all 0.2s ease-in-out;
   font-weight: 400;
 }
 
-/* Estados del input - Solo cambio de color */
+/* Input focus states - Color change only */
 .form-input:focus + .form-label {
   color: var(--color-primary);
   font-weight: 500;
@@ -108,7 +132,7 @@
   box-shadow: 0 0 0 1px var(--color-primary);
 }
 
-/* 🗑️ Botón de limpiar input */
+/* Clear input button */
 .clear-btn {
   position: absolute;
   right: 12px;
@@ -116,7 +140,7 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  border: 2px solid var(--color-accent); /* Borde color accent */
+  border: 2px solid var(--color-accent); /* Accent color border */
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
@@ -130,44 +154,70 @@
   margin: 0;
 }
 
-.clear-btn.visible {
+.clear-btn:hover,
+.form-input:focus + .clear-btn {
   opacity: 1;
   visibility: visible;
+  border-color: var(--color-text-primary);
 }
 
-.clear-btn:hover {
-  background: var(--color-accent); /* Fondo color accent en hover */
-  color: var(--color-white);
+/* Clear button cross icon */
+.clear-btn:before,
+.clear-btn:after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  background: var(--color-accent);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  transition: background-color 0.2s ease-in-out;
 }
 
-.clear-icon {
-  width: 16px;
-  height: 16px;
-  color: var(--color-accent); /* Color accent */
-  transition: color 0.2s ease-in-out;
+.clear-btn:after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
-.clear-btn:hover .clear-icon {
-  color: var(--color-white);
+.clear-btn:hover:before,
+.clear-btn:hover:after {
+  background: var(--color-text-primary);
 }
 
-/* 🎯 Botón principal */
-.btn-full {
-  width: 278px; /* Ancho específico 278px */
-  height: 50px; /* Altura específica 50px */
-  font-size: var(--text-2xl); /* 24px */
-  font-weight: 500;
-  margin-top: var(--spacing-lg);
+/* Primary action button */
+.btn-primary {
+  position: absolute;
+  left: 134px;
+  top: 372px;
+  width: 278px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: var(--color-primary);
+  color: #FFF;
+  border: none;
+  border-radius: 8px;
+  font-family: "ADLaM Display";
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
-/* 🎯 Estados de focus mejorados */
-.form-input:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
-}
-
-/* 🌟 Hover effects */
+/* Button hover effects */
 .btn-primary:hover {
   transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background: var(--color-primary-dark);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
