@@ -15,10 +15,15 @@
         "PlaceholderNombres": "Ingrese sus nombres",
         "PlaceholderApellidos": "Ingrese sus apellidos",
         "PlaceholderCorreo": "Ingrese su correo",
+        "PlaceholderNuevaContrasena": "Ingrese su nueva contraseña",
+        "PlaceholderConfirmarContrasena": "Confirme su contraseña",
 
         "InputNombres": "Nombres",
         "InputApellidos": "Apellidos",
         "InputCorreo": "Correo",
+        "InputContrasenaActual": "Contraseña Actual",
+        "InputNuevaContrasena": "Nueva Contraseña",
+        "InputConfirmarContrasena": "Confirmar Nueva Contraseña",
 
         "TituloRecuperarContrasena": "Recuperar\n\nContraseña",
         "TituloMenuPrincipal": "Menú Principal",
@@ -29,6 +34,7 @@
         "BotonSalir": "Salida",
 
         "TituloGestionCuenta": "Gestionar Cuenta",
+        "TituloCambiarContrasena": "Cambiar Contraseña",
         "BotonCambiarContrasena": "Cambiar Contraseña",
         "BotonRecuperar": "Recuperar",
 

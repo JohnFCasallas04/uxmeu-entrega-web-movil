@@ -5,6 +5,8 @@ import { AuthComponent } from './auth/auth.component';
 import { RecoverPassComponent } from './recover-pass/recover-pass.component';
 import { RegisterComponent } from './register/register.component';
 import { PrincipalMenuComponent } from './principal-menu/principal-menu.component';
+import { AccountManageComponent } from './account-manage/account-manage.component';
+import { ChangePassComponent } from './change-pass/change-pass.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -12,6 +14,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'recover-pass', component: RecoverPassComponent },
   { path: 'principal-menu', component: PrincipalMenuComponent },
+  { path: 'account-manage', component: AccountManageComponent },
+  { path: 'change-pass', component: ChangePassComponent },
   { path: '**', redirectTo: '/' }
 ];
 

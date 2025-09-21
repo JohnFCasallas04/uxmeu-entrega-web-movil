@@ -25,8 +25,8 @@ export class PrincipalMenuComponent implements OnInit {
   }
 
   navigateToGestionCuenta(): void {
-    // TODO: Implementar navegación a gestión de cuenta
-    console.log('Navegando a Gestión de Cuenta');
+    // Navegar al componente de gestión de cuenta
+    this.router.navigate(['/account-manage']);
   }
 
   navigateToGestionGrupos(): void {

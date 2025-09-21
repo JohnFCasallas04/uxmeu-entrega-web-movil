@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { RecoverPassComponent } from './recover-pass/recover-pass.component';
 import { RegisterComponent } from './register/register.component';
 import { PrincipalMenuComponent } from './principal-menu/principal-menu.component';
+import { AccountManageComponent } from './account-manage/account-manage.component';
+import { ChangePassComponent } from './change-pass/change-pass.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { PrincipalMenuComponent } from './principal-menu/principal-menu.componen
     HomeComponent,
     RecoverPassComponent,
     RegisterComponent,
-    PrincipalMenuComponent
+    PrincipalMenuComponent,
+    AccountManageComponent,
+    ChangePassComponent
   ],
   imports: [
     BrowserModule,
