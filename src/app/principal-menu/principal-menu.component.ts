@@ -30,8 +30,8 @@ export class PrincipalMenuComponent implements OnInit {
   }
 
   navigateToGestionGrupos(): void {
-    // TODO: Implementar navegación a gestión de grupos familiares
-    console.log('Navegando a Gestión de Grupos Familiares');
+    // Navegar al componente de gestión de grupos familiares
+    this.router.navigate(['/family-group']);
   }
 
   navigateToGestionCalendario(): void {

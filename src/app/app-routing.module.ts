@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { PrincipalMenuComponent } from './principal-menu/principal-menu.component';
 import { AccountManageComponent } from './account-manage/account-manage.component';
 import { ChangePassComponent } from './change-pass/change-pass.component';
+import { FamilyGroupComponent } from './family-group/family-group.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'principal-menu', component: PrincipalMenuComponent },
   { path: 'account-manage', component: AccountManageComponent },
   { path: 'change-pass', component: ChangePassComponent },
+  { path: 'family-group', component: FamilyGroupComponent },
   { path: '**', redirectTo: '/' }
 ];
 

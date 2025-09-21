@@ -1,0 +1,240 @@
+/* family-group.component.css */
+
+.family-group-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  display: flex;
+  gap: 0; /* Sin espacio entre las cards */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Primera Card - Grupo Familiar */
+.family-card {
+  position: relative;
+  width: 430px;
+  height: 609px;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  background: var(--color-background);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Segunda Card - Añadir Integrante */
+.add-member-card {
+  position: relative;
+  width: 430px;
+  height: 609px;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  background: var(--color-background);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+/* Botón Volver - Mismo estilo que account-manage */
+.back-button {
+  position: absolute;
+  top: 5px; /* Misma posición que account-manage */
+  left: 6px; /* Misma posición que account-manage */
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md); /* Mismo border radius */
+  transition: all var(--transition-fast);
+  z-index: 10;
+}
+
+.back-button:hover {
+  background: rgba(107, 114, 128, 0.1);
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-body);
+  transition: color var(--transition-fast);
+}
+
+.back-button:hover .back-icon {
+  color: var(--color-primary);
+}
+
+/* Título Grupo Familiar */
+.family-title {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  text-align: center;
+  font-family: var(--font-main);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-primary); /* Color principal */
+  margin: 0;
+}
+
+/* Textfields no modificables */
+.readonly-field {
+  position: absolute;
+  width: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.readonly-field-1 {
+  top: 150px;
+}
+
+.readonly-field-2 {
+  top: 220px;
+}
+
+.readonly-input {
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-md);
+  padding: 0 16px;
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+  color: var(--color-title);
+  box-sizing: border-box;
+}
+
+/* Botón Eliminar - Mismo border radius que account-manage */
+.delete-button {
+  position: absolute;
+  top: 450px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  background-color: var(--color-alert);
+  border: 2px solid var(--color-alert);
+  border-radius: var(--border-radius-sm); /* Mismo border radius que account-manage */
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.delete-button:hover {
+  background-color: #D73E47;
+  border-color: #D73E47;
+  transform: translateX(-50%) translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Título Añadir Integrante */
+.add-member-title {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+  text-align: center;
+  font-family: var(--font-main);
+  font-size: var(--text-2xl);
+  font-weight: 600;
+  color: var(--color-primary); /* Color principal */
+  margin: 0;
+}
+
+/* Input Group */
+.input-group {
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 350px;
+}
+
+.input-label {
+  display: block;
+  font-family: var(--font-main);
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--color-title);
+  margin-bottom: 8px;
+}
+
+.email-input {
+  width: 100%;
+  height: 56px;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-placeholder-light);
+  border-radius: var(--border-radius-lg);
+  padding: 16px;
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+  color: var(--color-title);
+  box-sizing: border-box;
+  transition: var(--transition-normal);
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(92, 134, 214, 0.1);
+}
+
+.email-input::placeholder {
+  color: var(--color-placeholder);
+  font-weight: 400;
+}
+
+/* Botón Añadir - Mismo border radius que account-manage */
+.add-button {
+  position: absolute;
+  top: 350px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-sm); /* Mismo border radius que account-manage */
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: var(--text-base);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.add-button:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  transform: translateX(-50%) translateY(-1px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .family-group-container {
+    flex-direction: column;
+    gap: 10px; /* Espacio mínimo en responsive */
+    padding: 20px;
+    overflow-y: auto;
+    position: relative;
+  }
+  
+  .family-card,
+  .add-member-card {
+    width: 90%;
+    max-width: 430px;
+  }
+}
