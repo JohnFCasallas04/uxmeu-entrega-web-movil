@@ -2,13 +2,13 @@
   font-family: var(--font-main), var(--font-fallback);
 }
 
-/* Back navigation button */
+/* Back navigation button - Configuración estándar */
 .back-btn {
   position: absolute;
-  top: 5px; /* 5px desde el top del card */
-  left: 6px; /* 6px desde el left del card */
-  width: 40px; /* Tamaño exacto solicitado */
-  height: 40px; /* Tamaño exacto solicitado */
+  top: 6px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -18,6 +18,7 @@
   border-radius: var(--border-radius-md);
   transition: all var(--transition-fast);
   z-index: 10;
+  padding: 0;
 }
 
 .back-btn:hover {
@@ -25,14 +26,9 @@
 }
 
 .back-icon {
-  width: 24px;
-  height: 24px;
-  color: var(--color-body);
-  transition: color var(--transition-fast);
-}
-
-.back-btn:hover .back-icon {
-  color: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  color: var(--color-title);
 }
 
 /* Header de autenticación */

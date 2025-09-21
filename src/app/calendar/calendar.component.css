@@ -1,0 +1,344 @@
+/* calendar.component.css */
+
+.calendar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  display: flex;
+  gap: 0; /* Sin espacio entre las cards */
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/*/* Botón Eliminar - Color de salida (mismo que principal-menu) */
+.delete-button {
+  position: absolute;
+  top: 450px;
+  left: 230px;
+  width: 130px;
+  height: 50px;
+  background-color: var(--color-alert);
+  border: 2px solid var(--color-alert);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+.card {
+  position: relative;
+  width: 430px;
+  height: 609px;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  background: var(--color-background);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Botón Volver - Mismo estilo que account-manage */
+.back-button {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  z-index: 10;
+  padding: 0;
+}
+
+.back-button:hover {
+  background: rgba(107, 114, 128, 0.1);
+}
+
+.back-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-title);
+}
+
+/* Título Calendarios - Card 1 */
+.calendar-title {
+  position: absolute;
+  top: 38px;
+  left: 51px;
+  width: 327px;
+  height: 45px;
+  font-size: 40px !important;
+  font-family: var(--font-main);
+  line-height: 28px;
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Lista de calendarios */
+.calendar-list {
+  position: absolute;
+}
+
+/* Campos readonly - Mismo estilo que family-group */
+.readonly-field {
+  position: absolute;
+  width: 367px;  
+  left: 32px;
+}
+
+.readonly-field-1 {
+  top: 132px;
+}
+
+.readonly-field-2 {
+  top: 187px;
+}
+
+.readonly-field-3 {
+  top: 242px;
+}
+
+.readonly-field-4 {
+  top: 297px;
+}
+
+.readonly-input {
+  width: 100%;
+  height: 56px;
+  background-color: var(--color-white);
+  border: 2px solid var(--color-primary);
+  border-radius: 0; /* Bordes completamente cuadrados */
+  padding: 0 16px;
+  font-family: var(--font-main);
+  font-size: 20px;
+  color: var(--color-title);
+  box-sizing: border-box;
+}
+
+/* Botón Añadir - Color principal */
+.add-button {
+  position: absolute;
+  top: 535px;
+  left: 131px;
+  width: 168px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 400; /* Mismo peso que títulos para más delgado */
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.add-button:hover {
+  background-color: #1a365d;
+  border-color: #1a365d;
+}
+
+/* Título Modificar Festivos - Card 2 */
+.modify-holidays-title {
+  position: absolute;
+  top: 38px;
+  left: 34px;
+  width: 361px;
+  height: 45px;
+  font-size: 40px !important;
+  font-family: var(--font-main);
+  line-height: 28px;
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Subcard del Calendario */
+.calendar-subcard {
+  position: absolute;
+  top: 108px;
+  left: 54px;
+  width: 322px;
+  height: 322px;
+  background: var(--color-white);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+/* Header del calendario */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1px;  
+  width: 290px;
+  height: 15px;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.nav-button svg {
+  width: 10px;
+  height: 10px;
+  fill: var(--color-primary);
+}
+
+.calendar-month-year {
+  font-size: 12px;
+  font-weight: 200;
+  color: var(--color-primary);
+  font-family: var(--font-main);
+}
+
+/* Días de la semana */
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 31.1px);
+  gap: 12px;  
+  margin-bottom: 9px;
+  justify-content: start;
+  width: 290px;
+  height: 12px;
+}
+
+.weekday {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--color-body);
+  padding: 4px 0;
+  font-family: var(--font-main);
+  width: 31.1px;
+}
+
+/* Grilla de días */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 31.1px);
+  grid-template-rows: repeat(6, 29.8px);
+  gap: 12px;
+  height: auto;
+  justify-content: start;
+  padding-top: 12px;
+}
+
+.calendar-day {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  font-family: var(--font-main);
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: 31.1px;
+  height: 29.8px;
+}
+
+.calendar-day:hover {
+  background-color: var(--color-accent);
+}
+
+.calendar-day.today {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.calendar-day.other-month {
+  color: #ccc;
+}
+
+.calendar-day.selected {
+  background-color: var(--color-accent);
+  font-weight: 600;
+  border: 2px solid var(--color-primary);
+}
+
+.calendar-day.holiday {
+  background-color: var(--color-alert);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.calendar-day.holiday.selected {
+  border: 2px solid var(--color-primary);
+}
+
+/* Botón Guardar - Color principal */
+.save-button {
+  position: absolute;
+  top: 535px;
+  left: 25px;
+  width: 168px;
+  height: 50px;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.save-button:hover {
+  background-color: #1a365d;
+  border-color: #1a365d;
+}
+
+/* Botón Eliminar - Color de salida (mismo que principal-menu) */
+.delete-button {
+  top: 535px;
+  left: 236px;
+  width: 169px;
+  height: 50px;
+  background-color: var(--color-alert);
+  border: 2px solid var(--color-alert);
+  border-radius: var(--border-radius-sm);
+  color: var(--color-white);
+  font-family: var(--font-main);
+  font-size: 20px;
+  font-weight: 100;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.delete-button:hover {
+  background-color: #D73E47;
+  border-color: #D73E47;
+}

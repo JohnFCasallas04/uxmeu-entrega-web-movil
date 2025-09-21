@@ -2,13 +2,13 @@
   font-family: var(--font-main), var(--font-fallback); /* ADLaM Display for all elements */
 }
 
-/* Back navigation button */
+/* Back navigation button - Configuración estándar */
 .back-btn {
   position: absolute;
-  top: 5px; /* Absolute coordinate on card */
-  left: 6px; /* Absolute coordinate on card */
-  width: 40px; /* Exact requested size */
-  height: 40px; /* Exact requested size */
+  top: 6px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
   border: none;
   background: transparent;
   cursor: pointer;
@@ -18,6 +18,7 @@
   border-radius: var(--border-radius-md);
   transition: all var(--transition-fast);
   z-index: 10;
+  padding: 0;
 }
 
 .back-btn:hover {
@@ -25,14 +26,9 @@
 }
 
 .back-icon {
-  width: 24px;
-  height: 24px;
-  color: var(--color-body);
-  transition: color var(--transition-fast);
-}
-
-.back-btn:hover .back-icon {
-  color: var(--color-primary);
+  width: 40px;
+  height: 40px;
+  color: var(--color-title);
 }
 
 /* Authentication header */

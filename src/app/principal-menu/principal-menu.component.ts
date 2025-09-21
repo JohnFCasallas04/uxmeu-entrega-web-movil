@@ -35,8 +35,8 @@ export class PrincipalMenuComponent implements OnInit {
   }
 
   navigateToGestionCalendario(): void {
-    // TODO: Implementar navegación a gestión de calendario
-    console.log('Navegando a Gestión de Calendario');
+    // Navegar al componente de calendario
+    this.router.navigate(['/calendar']);
   }
 
   logout(): void {

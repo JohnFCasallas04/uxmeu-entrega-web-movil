@@ -13,6 +13,7 @@ import { PrincipalMenuComponent } from './principal-menu/principal-menu.componen
 import { AccountManageComponent } from './account-manage/account-manage.component';
 import { ChangePassComponent } from './change-pass/change-pass.component';
 import { FamilyGroupComponent } from './family-group/family-group.component';
+import { CalendarComponent } from './calendar/calendar.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FamilyGroupComponent } from './family-group/family-group.component';
     PrincipalMenuComponent,
     AccountManageComponent,
     ChangePassComponent,
-    FamilyGroupComponent
+    FamilyGroupComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
