@@ -9,14 +9,14 @@
   align-items: center;
   min-height: 100vh;
   padding: var(--spacing-xl);
-  background: var(--color-background);
+  background: var(--color-white); /* Fondo blanco para la página */
 }
 
 /* Main menu card */
 .menu-card {
   width: 1200px;
   height: 610px;
-  background: var(--color-white);
+  background: var(--color-background); /* Fondo color-background para el card */
   border: 2px solid var(--color-primary); /* Primary color border #5C86D6 */
   border-radius: 0; /* Square corners */
   box-shadow: var(--shadow-lg);
