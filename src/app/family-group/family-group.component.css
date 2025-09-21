@@ -68,65 +68,67 @@
   color: var(--color-primary);
 }
 
-/* Título Grupo Familiar */
+/* Título Grupo Familiar - Mismo estilo que account-manage */
 .family-title {
   position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 350px;
-  text-align: center;
-  font-family: var(--font-main);
-  font-size: var(--text-2xl);
-  font-weight: 600;
-  color: var(--color-primary); /* Color principal */
+  top: 33px; /* Misma posición que account-manage */
+  left: 51px; /* Misma posición que account-manage */
+  width: 327px; /* Mismo ancho que account-manage */
+  height: 45px;
+  font-size: 40px !important; /* Mismo tamaño que account-manage */
+  font-family: var(--font-main); /* ADLaM Display */
+  color: var(--color-primary); /* Primary color */
   margin: 0;
+  padding: 0;
+  font-weight: 400; /* Mismo peso que account-manage */
+  text-align: center;
 }
 
-/* Textfields no modificables */
+/* Textfields no modificables - Bordes cuadrados */
 .readonly-field {
   position: absolute;
-  width: 350px;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 367px;  
+  left: 32px;
+
+  
 }
 
 .readonly-field-1 {
-  top: 150px;
+  top: 133px;
+
 }
 
 .readonly-field-2 {
-  top: 220px;
+  top: 188px;
 }
 
 .readonly-input {
   width: 100%;
-  height: 50px;
+  height: 56px; /* Altura actualizada a 56px */
   background-color: var(--color-white);
   border: 2px solid var(--color-primary);
-  border-radius: var(--border-radius-md);
+  border-radius: 0; /* Bordes completamente cuadrados */
   padding: 0 16px;
   font-family: var(--font-main);
-  font-size: var(--text-base);
+  font-size: 20px; /* Tamaño 20px como solicitado */
   color: var(--color-title);
   box-sizing: border-box;
 }
 
-/* Botón Eliminar - Mismo border radius que account-manage */
+/* Botón Eliminar - Texto 24px */
 .delete-button {
   position: absolute;
-  top: 450px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
+  top: 534px;
+  left: 108px;  
+  width: 216px;
   height: 50px;
   background-color: var(--color-alert);
   border: 2px solid var(--color-alert);
   border-radius: var(--border-radius-sm); /* Mismo border radius que account-manage */
   color: var(--color-white);
   font-family: var(--font-main);
-  font-size: var(--text-base);
-  font-weight: 600;
+  font-size: 24px; /* Tamaño 24px como solicitado */
+  font-weight: 500; /* Mismo peso que account-manage */
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -134,83 +136,170 @@
 .delete-button:hover {
   background-color: #D73E47;
   border-color: #D73E47;
-  transform: translateX(-50%) translateY(-1px);
-  box-shadow: var(--shadow-lg);
 }
 
-/* Título Añadir Integrante */
+/* Título Añadir Integrante - Mismo estilo que account-manage */
 .add-member-title {
   position: absolute;
-  top: 80px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 350px;
-  text-align: center;
+  top: 33px;
+  left: 50px;
+  width: 327px;
+  height: 45px;
+  font-size: 40px !important;
   font-family: var(--font-main);
-  font-size: var(--text-2xl);
-  font-weight: 600;
-  color: var(--color-primary); /* Color principal */
+  line-height: 28px;
+  color: var(--color-primary);
   margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-align: center;
 }
 
-/* Input Group */
+/* Input Group - Contenedor principal */
 .input-group {
   position: absolute;
-  top: 200px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 350px;
+  top: 133px;
+  left: 58px; 
+  right: 60px;
+}
+
+.input-container {
+  position: relative; /* Contenedor relativo para el input y botón */
+  display: inline-block;
+  width: 312px;
 }
 
 .input-label {
-  display: block;
+  position: absolute;
+  left: 12px;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: var(--text-base); /* 16px */
+  color: var(--color-body); /* Label color using variable */
   font-family: var(--font-main);
-  font-size: var(--text-sm);
-  font-weight: 500;
-  color: var(--color-title);
-  margin-bottom: 8px;
+  background: var(--color-background); /* Label background using variable */
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
 }
 
 .email-input {
-  width: 100%;
-  height: 56px;
-  background-color: var(--color-white);
-  border: 2px solid var(--color-placeholder-light);
-  border-radius: var(--border-radius-lg);
-  padding: 16px;
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 56px; /* Altura estándar */
+  padding: 16px 48px 16px 16px; /* Extra space on right for clear button */
+  border: 2px solid var(--color-accent); /* Border using accent color */
+  border-radius: var(--border-radius-sm); /* Square appearance */
+  font-size: 20px; /* Tamaño 20px como solicitado */
   font-family: var(--font-main);
-  font-size: var(--text-base);
-  color: var(--color-title);
+  background: var(--color-background); /* Background using variable */
+  transition: all 0.2s ease-in-out;
   box-sizing: border-box;
-  transition: var(--transition-normal);
 }
 
 .email-input:focus {
   outline: none;
   border-color: var(--color-primary);
-  box-shadow: 0 0 0 3px rgba(92, 134, 214, 0.1);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+.email-input:focus + .input-label {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+/* Botón de limpiar dentro del input */
+.clear-button {
+  position: absolute;
+  right: 12px; /* 12px desde el borde derecho */
+  top: 50%;
+  transform: translateY(-50%); /* Centrado verticalmente */
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  transition: background-color 0.2s ease;
+}
+
+.clear-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.clear-button svg {
+  width: 16px;
+  height: 16px;
+  fill: var(--color-body);
 }
 
 .email-input::placeholder {
-  color: var(--color-placeholder);
+  color: var(--color-placeholder-light); /* Placeholder color with 25% transparency */
   font-weight: 400;
 }
 
-/* Botón Añadir - Mismo border radius que account-manage */
+/* Clear input button - Dentro del input */
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-accent); /* Accent color border */
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  margin: 0;
+  z-index: 10; /* Asegurar que esté por encima del input */
+}
+
+.clear-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.clear-btn:hover {
+  background: var(--color-accent); /* Accent color background on hover */
+  color: var(--color-white);
+}
+
+.clear-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent); /* Accent color */
+  transition: color 0.2s ease-in-out;
+}
+
+.clear-btn:hover .clear-icon {
+  color: var(--color-white);
+}
+
+/* Botón Añadir - Texto 24px */
 .add-button {
   position: absolute;
-  top: 350px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 200px;
+  top: 534px;
+  left: 105px;  
+  width: 215px;
   height: 50px;
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
   border-radius: var(--border-radius-sm); /* Mismo border radius que account-manage */
   color: var(--color-white);
   font-family: var(--font-main);
-  font-size: var(--text-base);
-  font-weight: 600;
+  font-size: 24px; /* Tamaño 24px como solicitado */
+  font-weight: 500; /* Mismo peso que account-manage */
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -218,8 +307,6 @@
 .add-button:hover {
   background-color: var(--color-secondary);
   border-color: var(--color-secondary);
-  transform: translateX(-50%) translateY(-1px);
-  box-shadow: var(--shadow-lg);
 }
 
 /* Responsive adjustments */

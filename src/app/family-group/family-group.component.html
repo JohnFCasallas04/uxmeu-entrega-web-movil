@@ -46,12 +46,22 @@
 
     <!-- Input de Correo -->
     <div class="input-group">
-      <label class="input-label">{{ labels.InputCorreo }}</label>
-      <input 
-        type="email" 
-        class="email-input"
-        [(ngModel)]="newMemberEmail"
-        [placeholder]="labels.PlaceholderCorreoIntegrante">
+      <div class="input-container">
+        <input 
+          type="email" 
+          id="email"
+          class="email-input"
+          [(ngModel)]="newMemberEmail"
+          [placeholder]="labels.PlaceholderCorreoIntegrante"
+          (input)="onInputChange($event, 'email')">
+        <button type="button" class="clear-btn" (click)="clearInput('email')" [class.visible]="newMemberEmail">
+          <svg class="clear-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <label for="email" class="input-label">{{ labels.InputCorreo }}</label>
     </div>
 
     <!-- Botón Añadir -->

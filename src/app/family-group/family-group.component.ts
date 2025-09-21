@@ -29,4 +29,17 @@ export class FamilyGroupComponent {
       this.newMemberEmail = '';
     }
   }
+
+  onInputChange(event: Event, field: string) {
+    const target = event.target as HTMLInputElement;
+    if (field === 'email') {
+      this.newMemberEmail = target.value;
+    }
+  }
+
+  clearInput(field: string) {
+    if (field === 'email') {
+      this.newMemberEmail = '';
+    }
+  }
 }
