@@ -1,7 +1,7 @@
 <div class="menu-container">
   <div class="menu-card">
     <header class="menu-header">
-      <h1 class="menu-title">{{labels[0]?.TituloMenuPrincipal || 'Menú Principal'}}</h1>
+      <h1 class="menu-title">{{labels[0]?.TituloMenuPrincipal}}</h1>
     </header>
 
     <div class="menu-content">
@@ -11,7 +11,7 @@
             <!-- Placeholder para imagen de Gestionar Cuenta 230x230 -->
             <div class="image-placeholder account-image"></div>
           </div>
-          <h3 class="option-title">{{labels[0]?.GestionCuenta || 'Gestionar Cuenta'}}</h3>
+          <h3 class="option-title">{{labels[0]?.GestionCuenta}}</h3>
         </div>
 
         <div class="menu-option" (click)="navigateToGestionGrupos()">
@@ -19,7 +19,7 @@
             <!-- Placeholder para imagen de Gestionar Grupos Familiares 230x230 -->
             <div class="image-placeholder groups-image"></div>
           </div>
-          <h3 class="option-title">{{labels[0]?.GestionGrupoFamiliar || 'Gestionar Grupos Familiares'}}</h3>
+          <h3 class="option-title">{{labels[0]?.GestionGrupoFamiliar}}</h3>
         </div>
 
         <div class="menu-option" (click)="navigateToGestionCalendario()">
@@ -27,14 +27,14 @@
             <!-- Placeholder para imagen de Gestionar Calendario 230x230 -->
             <div class="image-placeholder calendar-image"></div>
           </div>
-          <h3 class="option-title">{{labels[0]?.GestionCalendario || 'Gestionar Calendario'}}</h3>
+          <h3 class="option-title">{{labels[0]?.GestionCalendario}}</h3>
         </div>
       </div>
     </div>
 
     <footer class="menu-footer">
       <button type="button" class="btn btn-alert btn-exit" (click)="logout()">
-        {{labels[0]?.BotonSalir || 'Salida'}}
+        {{labels[0]?.BotonSalir}}
       </button>
     </footer>
   </div>

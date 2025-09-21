@@ -20,16 +20,19 @@
   border: 2px solid var(--color-primary); /* Primary color border #5C86D6 */
   border-radius: 0; /* Square corners */
   box-shadow: var(--shadow-lg);
-  display: flex;
-  flex-direction: column;
+  position: relative; /* Establecer contexto de posicionamiento */
   padding: var(--spacing-xl);
   box-sizing: border-box;
 }
 
 /* Menu header section */
 .menu-header {
+  position: absolute;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  width: calc(100% - 48px); /* Ancho completo menos padding */
   text-align: center;
-  margin-bottom: var(--spacing-xl);
 }
 
 .menu-title {
@@ -42,11 +45,11 @@
 
 /* Main menu content */
 .menu-content {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: var(--spacing-xl);
+  position: absolute;
+  top: 140px; /* Posición desde la parte superior del card */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  width: calc(100% - 48px); /* Ancho completo menos padding */
 }
 
 /* Menu options container */
@@ -55,6 +58,7 @@
   gap: var(--spacing-4xl); /* Spacing between options */
   justify-content: center;
   align-items: center;
+  position: relative; /* Contexto para posicionamiento de opciones individuales */
 }
 
 /* Individual menu option */
@@ -63,14 +67,29 @@
   flex-direction: column;
   align-items: center;
   cursor: pointer;
-  transition: all var(--transition-normal);
-  padding: var(--spacing-lg);
+  transition: none; /* Eliminar todas las transiciones */
+  padding: 0; /* Quitar padding para eliminar los recuadros */
   border-radius: var(--border-radius-lg);
 }
 
-.menu-option:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+/* Opciones específicas con posicionamiento absoluto relativo al card */
+.menu-option:nth-child(1) { /* Gestionar Cuenta */
+  position: absolute;
+  top: 13px;
+  left: 50px; /* Posición desde la izquierda del contenedor de opciones */
+}
+
+.menu-option:nth-child(2) { /* Grupos Familiares */
+  position: absolute;
+  top: 13px;
+  left: 50%; /* Centrar horizontalmente */
+  transform: translateX(-50%); /* Ajustar para centrado perfecto */
+}
+
+.menu-option:nth-child(3) { /* Gestionar Calendario */
+  position: absolute;
+  top: 13px;
+  right: 50px; /* 76px desde el borde derecho del card */
 }
 
 /* Image placeholder container */
@@ -88,38 +107,30 @@
   font-size: var(--text-lg);
   color: var(--color-white);
   font-weight: 500;
-  transition: all var(--transition-fast);
+  transition: none; /* Eliminar transiciones de la imagen */
 }
 
-/* Specific colors for each placeholder */
+/* Specific images for each option */
 .account-image {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
-}
-
-.account-image::after {
-  content: 'Gestionar\aCuenta';
-  white-space: pre;
-  text-align: center;
+  background-image: url('/assets/images/gestionar_cuenta.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .groups-image {
-  background: linear-gradient(135deg, var(--color-accent), #4ECDC4);
-}
-
-.groups-image::after {
-  content: 'Gestionar\aGrupos\aFamiliares';
-  white-space: pre;
-  text-align: center;
+  background-image: url('/assets/images/grupos_familiares.png');
+  background-size: 105%; /* Tamaño ajustado para que se vea proporcionalmente igual */
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 50%; /* Hacer la imagen completamente redonda */
 }
 
 .calendar-image {
-  background: linear-gradient(135deg, #FF6B6B, #FFE66D);
-}
-
-.calendar-image::after {
-  content: 'Gestionar\aCalendario';
-  white-space: pre;
-  text-align: center;
+  background-image: url('/assets/images/calendarios.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* Option titles */
@@ -139,9 +150,13 @@
 
 /* Menu footer */
 .menu-footer {
+  position: absolute;
+  top: 530px; /* 530px desde la parte superior del card */
+  left: 50%;
+  transform: translateX(-50%); /* Centrar horizontalmente */
+  width: calc(100% - 48px); /* Ancho completo menos padding */
   display: flex;
   justify-content: center;
-  margin-top: auto;
 }
 
 /* Exit button */
@@ -158,14 +173,13 @@
   border: 2px solid var(--color-alert);
   border-radius: var(--border-radius-sm);
   cursor: pointer;
-  transition: all var(--transition-fast);
+  transition: background-color var(--transition-fast), border-color var(--transition-fast); /* Solo transiciones de color */
 }
 
 .btn-alert:hover {
   background: #D73E47; /* Darker alert color */
   border-color: #D73E47;
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
+  /* Eliminar transform y box-shadow para mantener solo el destello de color */
 }
 
 /* Responsive design */
@@ -176,8 +190,19 @@
     min-height: 610px;
   }
   
-  .menu-options {
-    gap: var(--spacing-2xl);
+  /* Reajustar posiciones para pantallas más pequeñas */
+  .menu-option:nth-child(1) { /* Gestionar Cuenta */
+    left: 20px;
+  }
+
+  .menu-option:nth-child(2) { /* Grupos Familiares */
+    left: 50%; /* Mantener centrado horizontalmente */
+    transform: translateX(-50%); /* Ajustar para centrado perfecto */
+  }
+
+  .menu-option:nth-child(3) { /* Gestionar Calendario */
+    right: 76px; /* Mantener 76px desde el borde derecho */
+    left: auto; /* Resetear left para usar right */
   }
   
   .image-placeholder {
@@ -187,9 +212,24 @@
 }
 
 @media (max-width: 768px) {
+  /* Para móviles, cambiar a disposición vertical */
+  .menu-content {
+    top: 120px;
+    height: 400px; /* Altura específica para el contenido */
+  }
+  
   .menu-options {
     flex-direction: column;
     gap: var(--spacing-xl);
+    position: static; /* Volver a flujo normal en móviles */
+  }
+  
+  .menu-option:nth-child(1), 
+  .menu-option:nth-child(2), 
+  .menu-option:nth-child(3) {
+    position: static; /* Volver a flujo normal en móviles */
+    left: auto;
+    top: auto;
   }
   
   .image-placeholder {
@@ -204,21 +244,9 @@
   .option-title {
     font-size: var(--text-lg);
   }
-}
-
-/* Animations */
-.menu-card {
-  animation: fadeInUp 0.6s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
+  
+  .menu-footer {
+    top: 480px; /* Ajustar para móviles, menor distancia desde arriba */
   }
 }
 
