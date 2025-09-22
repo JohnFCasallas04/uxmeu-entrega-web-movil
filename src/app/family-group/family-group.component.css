@@ -1,4 +1,4 @@
-/* family-group.component.css */
+/* Configuración de grupos familiares */
 
 .family-group-container {
   position: fixed;
@@ -15,7 +15,7 @@
   overflow: hidden;
 }
 
-/* Wrapper general de las dos cards */
+/* Contenedor de tarjetas */
 .cards-wrapper {
   display: flex;
   gap: 0;
@@ -25,7 +25,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Wrapper individual de cada card (canvas fijo 430x609) */
+/* Contenedor individual de tarjeta */
 .card-wrapper {
   width: 430px;
   height: 609px;
@@ -33,7 +33,7 @@
   flex-shrink: 0;
 }
 
-/* Primera Card - Grupo Familiar */
+/* Tarjeta de grupo familiar */
 .family-card {
   position: absolute;
   top: 0;
@@ -46,7 +46,7 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
 
-/* Segunda Card - Añadir Integrante */
+/* Tarjeta de añadir integrante */
 .add-member-card {
   position: absolute;
   top: 0;

@@ -1,7 +1,7 @@
-/* 🎨 FestivAlarm - Sistema de Diseño Global */
+/* Sistema de diseño global de FestivAlarm */
 @import './styles/variables.css';
 
-/* 🔄 Reset y Normalización */
+/* Reset y normalización */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,9 +13,9 @@
   box-sizing: border-box;
 }
 
-/* 📱 Base HTML/Body - Pixel Perfect para 1440x1024 */
+/* Configuración base HTML/Body */
 html {
-  font-size: 16px; /* Base font size */
+  font-size: 16px;
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
@@ -33,7 +33,7 @@ body {
   overflow-x: hidden;
 }
 
-/* 🎯 Contenedor Principal - Centrado para 1440px */
+/* Contenedor principal centrado */
 .app-container {
   width: 100%;
   max-width: var(--viewport-width);
@@ -49,7 +49,7 @@ body {
   padding: 0 var(--spacing-lg);
 }
 
-/* 🔤 Sistema Tipográfico */
+/* Sistema tipográfico */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-main);
   color: var(--color-title);
@@ -77,7 +77,7 @@ small {
   color: var(--color-body);
 }
 
-/* 🔗 Enlaces */
+/* Enlaces */
 a {
   color: var(--color-primary);
   text-decoration: none;
@@ -89,7 +89,7 @@ a:hover {
   text-decoration: underline;
 }
 
-/* 📝 Formularios */
+/* Formularios */
 input, textarea, select, button {
   font-family: inherit;
   font-size: inherit;
@@ -101,7 +101,7 @@ textarea::placeholder {
   opacity: 1;
 }
 
-/* 🎛 Botones Base */
+/* Botones base */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -150,7 +150,7 @@ textarea::placeholder {
   color: var(--color-white);
 }
 
-/* 🚨 Estados de Alerta */
+/* Estados de alerta */
 .text-alert {
   color: var(--color-alert);
 }
@@ -160,7 +160,7 @@ textarea::placeholder {
   color: var(--color-white);
 }
 
-/* 📐 Clases Utilitarias de Espaciado */
+/* Clases utilitarias de espaciado */
 .p-xs { padding: var(--spacing-xs); }
 .p-sm { padding: var(--spacing-sm); }
 .p-md { padding: var(--spacing-md); }
@@ -173,7 +173,7 @@ textarea::placeholder {
 .m-lg { margin: var(--spacing-lg); }
 .m-xl { margin: var(--spacing-xl); }
 
-/* 🎯 Flexbox Utilities */
+/* Utilidades Flexbox */
 .flex { display: flex; }
 .flex-col { flex-direction: column; }
 .flex-row { flex-direction: row; }
@@ -183,7 +183,7 @@ textarea::placeholder {
 .justify-around { justify-content: space-around; }
 .flex-1 { flex: 1; }
 
-/* 📱 Grid System */
+/* Sistema Grid */
 .grid { display: grid; }
 .grid-cols-1 { grid-template-columns: repeat(1, 1fr); }
 .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
@@ -195,14 +195,14 @@ textarea::placeholder {
 .gap-lg { gap: var(--spacing-lg); }
 .gap-xl { gap: var(--spacing-xl); }
 
-/* 🎨 Background Colors */
+/* Colores de fondo */
 .bg-primary { background-color: var(--color-primary); }
 .bg-secondary { background-color: var(--color-secondary); }
 .bg-accent { background-color: var(--color-accent); }
 .bg-background { background-color: var(--color-background); }
 .bg-white { background-color: var(--color-white); }
 
-/* 🔤 Text Colors */
+/* Colores de texto */
 .text-primary { color: var(--color-primary); }
 .text-secondary { color: var(--color-secondary); }
 .text-title { color: var(--color-title); }
@@ -212,7 +212,7 @@ textarea::placeholder {
 .text-left { text-align: left; }
 .text-right { text-align: right; }
 
-/* 🔄 Responsive - Mantener pixel perfect en viewport objetivo */
+/* Responsive */
 @media (max-width: 1439px) {
   .app-container {
     max-width: 100%;
@@ -224,7 +224,7 @@ textarea::placeholder {
   }
 }
 
-/* 🌟 Material Design Override para ADLaM Display */
+/* Override para tipografía ADLaM Display */
 .mat-typography {
   font-family: var(--font-main), var(--font-fallback);
 }

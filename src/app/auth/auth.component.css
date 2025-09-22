@@ -1,8 +1,9 @@
+/* Configuración tipográfica global */
 * {
   font-family: var(--font-main), var(--font-fallback);
 }
 
-/* Back navigation button - Configuración estándar */
+/* Botón de navegación atrás */
 .back-btn {
   position: absolute;
   top: 6px;
@@ -31,9 +32,9 @@
   color: var(--color-title);
 }
 
-/* Header de autenticación */
+/* Encabezado de autenticación */
 .auth-header {
-  position: absolute; /* Cambio a absolute para posicionamiento independiente */
+  position: absolute;
   top: 0;
   left: 0;
   margin: 0;
@@ -41,12 +42,10 @@
   z-index: 5;
 }
 
-/* Título según coordenadas exactas de Figma */
-/* Coordenadas Figma aproximadas para el título */
 .auth-title {
   position: absolute;
-  top: 117px; /* Coordenada exacta de Figma */
-  left: 120px; /* Coordenada exacta de Figma */
+  top: 117px;
+  left: 120px;
   width: 307px;
   height: 45px;
   color: var(--color-primary);

@@ -1,8 +1,9 @@
+/* Configuración tipográfica global */
 * {
-  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display for all elements */
+  font-family: var(--font-main), var(--font-fallback);
 }
 
-/* Back navigation button - Configuración estándar */
+/* Botón de navegación atrás */
 .back-btn {
   position: absolute;
   top: 6px;
@@ -31,7 +32,7 @@
   color: var(--color-title);
 }
 
-/* Authentication header */
+/* Encabezado de autenticación */
 .auth-header {
   position: absolute;
   top: 0;
@@ -44,12 +45,12 @@
 
 .auth-title {
   position: absolute;
-  top: 80px; /* Absolute coordinate on card */
-  left: 120px; /* Absolute coordinate on card */
+  top: 80px;
+  left: 120px;
   width: 306px;
-  font-size: var(--text-5xl) !important; /* Forced 48px */
-  font-family: var(--font-main); /* ADLaM Display */
-  color: var(--color-primary); /* Primary color */
+  font-size: var(--text-5xl) !important;
+  font-family: var(--font-main);
+  color: var(--color-primary);
   margin: 0;
   padding: 0;
   font-weight: 400;
@@ -58,17 +59,17 @@
 
 .auth-subtitle {
   position: absolute;
-  top: 140px; /* Absolute coordinate on card */
-  left: 120px; /* Absolute coordinate on card */
+  top: 140px;
+  left: 120px;
   width: 306px;
   font-size: var(--text-lg);
-  font-family: var(--font-main); /* ADLaM Display */
+  font-family: var(--font-main);
   color: var(--color-body);
   margin: 0;
   text-align: center;
 }
 
-/* Form container */
+/* Contenedor del formulario */
 .auth-form {
   position: absolute;
   top: 0;
@@ -78,7 +79,7 @@
   z-index: 5;
 }
 
-/* Material 3 input fields with absolute positioning */
+/* Campos de entrada */
 .input-field {
   position: absolute;
   margin: 0;
@@ -86,46 +87,42 @@
   z-index: 5;
 }
 
-/* Names input field coordinates */
 .nombres-field {
-  top: 117px; /* Absolute coordinate on card */
-  left: 117px; /* Absolute coordinate on card */
+  top: 117px;
+  left: 117px;
 }
 
-/* Last names input field coordinates */
 .apellidos-field {
-  top: 200px; /* Absolute coordinate on card */
-  left: 117px; /* Absolute coordinate on card */
+  top: 200px;
+  left: 117px;
 }
 
-/* Email input field coordinates */
 .correo-field {
-  top: 283px; /* Absolute coordinate on card */
-  left: 117px; /* Absolute coordinate on card */
+  top: 283px;
+  left: 117px;
 }
 
-/* Password input field coordinates */
 .password-field {
-  top: 366px; /* Absolute coordinate on card */
-  left: 117px; /* Absolute coordinate on card */
+  top: 366px;
+  left: 117px;
 }
 
 .form-input {
-  width: 312px; /* Specific 312px width */
-  height: 56px; /* Specific 56px height */
-  padding: 16px 48px 16px 16px; /* Extra space on right for clear button */
-  border: 2px solid var(--color-accent); /* Border using accent color */
-  border-radius: var(--border-radius-sm); /* Square appearance */
-  font-size: var(--text-base); /* 16px for input and placeholder */
+  width: 312px;
+  height: 56px;
+  padding: 16px 48px 16px 16px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-base);
   font-family: var(--font-main);
-  background: var(--color-background); /* Background using variable */
+  background: var(--color-background);
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
 }
 
 .form-input::placeholder {
-  color: var(--color-placeholder-light); /* Placeholder color with 25% transparency */
-  font-size: var(--text-base); /* 16px for placeholder */
+  color: var(--color-placeholder-light);
+  font-size: var(--text-base);
 }
 
 .form-label {
@@ -133,17 +130,17 @@
   left: 12px;
   top: 0;
   transform: translateY(-50%);
-  font-size: var(--text-base); /* 16px */
-  color: var(--color-body); /* Label color using variable */
+  font-size: var(--text-base);
+  color: var(--color-body);
   font-family: var(--font-main);
-  background: var(--color-background); /* Label background using variable */
+  background: var(--color-background);
   padding: 0 4px;
   pointer-events: none;
   transition: all 0.2s ease-in-out;
   font-weight: 400;
 }
 
-/* Input focus states - Color change only */
+/* Estados de foco */
 .form-input:focus + .form-label {
   color: var(--color-primary);
   font-weight: 500;

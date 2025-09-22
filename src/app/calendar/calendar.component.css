@@ -1,6 +1,6 @@
-/* calendar.component.css */
+/* Configuración de calendario */
 
-.calendar-container {
+.calendar-container  {
   position: fixed;
   top: 0;
   left: 0;
@@ -8,13 +8,43 @@
   height: 100vh;
   background-color: var(--color-white);
   display: flex;
-  gap: 0; /* Sin espacio entre las cards */
+  gap: 0;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  overflow: hidden;
 }
 
-/*/* Botón Eliminar - Color de salida (mismo que principal-menu) */
+/* Contenedor de tarjetas */
+.cards-wrapper {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Contenedor individual de tarjeta */
+.card-wrapper {
+  width: 430px;
+  height: 609px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.card-card-1, .card-card-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--color-primary);
+  border-radius: 0;
+  background: var(--color-background);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
 .delete-button {
   position: absolute;
   top: 450px;
@@ -341,4 +371,23 @@
 .delete-button:hover {
   background-color: #D73E47;
   border-color: #D73E47;
+}
+
+
+/* Responsive con apilado + escalado */
+@media (max-width: 900px) {
+  .calendar-container {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-y: auto;
+    padding: 20px;
+  }
+
+  .cards-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
 }
