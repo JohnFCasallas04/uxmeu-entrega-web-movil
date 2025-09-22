@@ -21,10 +21,6 @@
   padding: 0;
 }
 
-.back-btn:hover {
-  background: rgba(107, 114, 128, 0.1);
-}
-
 .back-icon {
   width: 40px;
   height: 40px;
@@ -204,13 +200,6 @@
   line-height: 32px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-}
-
-/* Button hover effects */
-.btn-primary:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  background: var(--color-primary-dark);
 }
 
 .btn-primary:active {

@@ -21,10 +21,6 @@
   padding: 0;
 }
 
-.back-btn:hover {
-  background: rgba(107, 114, 128, 0.1);
-}
-
 .back-icon {
   width: 40px;
   height: 40px;

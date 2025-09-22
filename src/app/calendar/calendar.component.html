@@ -6,7 +6,7 @@
             <!-- Card 1: Calendarios -->
             <div class="card-card-1">
                 <!-- Botón de retorno dentro del card 1 -->
-                <button type="button" class="back-button" (click)="goBack()">
+                <button type="button" class="back-btn" (click)="goBack()">
                     <svg class="back-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M19 12H5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -38,7 +38,7 @@
                 </div>
 
                 <!-- Botón Añadir -->
-                <button type="button" class="add-button" (click)="addCalendar()">
+                <button type="button" class="btn btn-primary add-button" (click)="addCalendar()">
                     {{labels[0]?.BotonAnadir}}
                 </button>
             </div>
@@ -96,11 +96,11 @@
 
                 <!-- Botones de acción -->
                 <div class="action-buttons">
-                    <button type="button" class="save-button" (click)="saveHoliday()">
+                    <button type="button" class="btn btn-primary save-button" (click)="saveHoliday()">
                         {{labels[0]?.BotonGuardar}}
                     </button>
 
-                    <button type="button" class="delete-button" (click)="deleteHoliday()">
+                    <button type="button" class="btn btn-alert delete-button" (click)="deleteHoliday()">
                         {{labels[0]?.BotonEliminar}}
                     </button>
                 </div>

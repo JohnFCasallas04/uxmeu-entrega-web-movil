@@ -177,11 +177,6 @@
     cursor: pointer;
     transition: background-color var(--transition-fast), border-color var(--transition-fast);
 }
-
-.btn-alert:hover {
-    background: #D73E47;
-    border-color: #D73E47;
-}
 /* Estados de foco */
 .menu-option:focus {
     outline: 2px solid var(--color-primary);

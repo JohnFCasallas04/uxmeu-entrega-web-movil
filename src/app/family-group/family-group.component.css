@@ -78,10 +78,6 @@
   padding: 0;
 }
 
-.back-button:hover {
-  background: rgba(107, 114, 128, 0.1);
-}
-
 .back-icon {
   width: 40px;
   height: 40px;
@@ -148,11 +144,6 @@
   font-weight: 500;
   cursor: pointer;
   transition: var(--transition-fast);
-}
-
-.delete-button:hover {
-  background-color: #D73E47;
-  border-color: #D73E47;
 }
 
 /* Título Añadir Integrante */
@@ -244,10 +235,6 @@
   transition: background-color 0.2s ease;
 }
 
-.clear-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-}
-
 .clear-button svg {
   width: 16px;
   height: 16px;
@@ -287,11 +274,6 @@
   visibility: visible;
 }
 
-.clear-btn:hover {
-  background: var(--color-accent);
-  color: var(--color-white);
-}
-
 .clear-icon {
   width: 16px;
   height: 16px;
@@ -320,12 +302,6 @@
   cursor: pointer;
   transition: var(--transition-fast);
 }
-
-.add-button:hover {
-  background-color: var(--color-secondary);
-  border-color: var(--color-secondary);
-}
-
 /* Responsive con apilado + escalado */
 @media (max-width: 900px) {
   .family-group-container {

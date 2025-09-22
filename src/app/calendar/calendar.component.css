@@ -90,10 +90,6 @@
   padding: 0;
 }
 
-.back-button:hover {
-  background: rgba(107, 114, 128, 0.1);
-}
-
 .back-icon {
   width: 40px;
   height: 40px;
@@ -176,11 +172,6 @@
   transition: var(--transition-fast);
 }
 
-.add-button:hover {
-  background-color: #1a365d;
-  border-color: #1a365d;
-}
-
 /* Título Modificar Festivos - Card 2 */
 .modify-holidays-title {
   position: absolute;
@@ -234,10 +225,6 @@
   width: 20px;
   height: 20px;
   transition: background-color 0.2s ease;
-}
-
-.nav-button:hover {
-  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .nav-button svg {
@@ -346,11 +333,6 @@
   transition: var(--transition-fast);
 }
 
-.save-button:hover {
-  background-color: #1a365d;
-  border-color: #1a365d;
-}
-
 /* Botón Eliminar - Color de salida (mismo que principal-menu) */
 .delete-button {
   top: 535px;
@@ -367,12 +349,6 @@
   cursor: pointer;
   transition: var(--transition-fast);
 }
-
-.delete-button:hover {
-  background-color: #D73E47;
-  border-color: #D73E47;
-}
-
 
 /* Responsive con apilado + escalado */
 @media (max-width: 900px) {

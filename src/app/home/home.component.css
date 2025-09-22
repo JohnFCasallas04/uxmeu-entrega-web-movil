@@ -90,8 +90,3 @@
   cursor: pointer;
   transition: all var(--transition-fast);
 }
-
-.btn-full:hover {
-  background-color: var(--color-secondary); /* #8FA8E6 on hover */
-  color: var(--color-white);
-}

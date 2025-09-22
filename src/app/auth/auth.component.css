@@ -22,10 +22,6 @@
   padding: 0;
 }
 
-.back-btn:hover {
-  background: rgba(107, 114, 128, 0.1);
-}
-
 .back-icon {
   width: 40px;
   height: 40px;
@@ -265,15 +261,10 @@
   visibility: visible;
 }
 
-.clear-btn:hover {
-  background: var(--color-accent); /* Fondo color accent en hover */
-  color: var(--color-white);
-}
-
 .clear-icon {
   width: 16px;
   height: 16px;
-  color: var(--color-accent); /* Color accent */
+  color: var(--color-accent);
   transition: color 0.2s ease-in-out;
 }
 
@@ -362,9 +353,4 @@
   word-wrap: break-word;
 }
 
-.btn-full:hover,
-.btn.btn-primary.btn-full:hover {
-  background-color: var(--color-secondary);
-  transform: translateY(-1px);
-  box-shadow: var(--shadow-lg);
-}
+/* El hover se maneja globalmente con .btn-primary:hover */
