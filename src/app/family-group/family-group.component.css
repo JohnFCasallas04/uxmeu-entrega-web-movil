@@ -8,17 +8,38 @@
   height: 100vh;
   background-color: var(--color-white);
   display: flex;
-  gap: 0; /* Sin espacio entre las cards */
+  gap: 0;
   justify-content: center;
   align-items: center;
   z-index: 1;
+  overflow: hidden;
+}
+
+/* Wrapper general de las dos cards */
+.cards-wrapper {
+  display: flex;
+  gap: 0;
+  justify-content: center;
+  align-items: center;
+  transform-origin: top center;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Wrapper individual de cada card (canvas fijo 430x609) */
+.card-wrapper {
+  width: 430px;
+  height: 609px;
+  position: relative;
+  flex-shrink: 0;
 }
 
 /* Primera Card - Grupo Familiar */
 .family-card {
-  position: relative;
-  width: 430px;
-  height: 609px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--color-primary);
   border-radius: 0;
   background: var(--color-background);
@@ -27,15 +48,18 @@
 
 /* Segunda Card - Añadir Integrante */
 .add-member-card {
-  position: relative;
-  width: 430px;
-  height: 609px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 1px solid var(--color-primary);
   border-radius: 0;
   background: var(--color-background);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }
-/* Botón Volver - Configuración estándar */
+
+/* Botón Volver */
 .back-button {
   position: absolute;
   top: 6px;
@@ -64,34 +88,31 @@
   color: var(--color-title);
 }
 
-/* Título Grupo Familiar - Mismo estilo que account-manage */
+/* Título Grupo Familiar */
 .family-title {
   position: absolute;
-  top: 33px; /* Misma posición que account-manage */
-  left: 51px; /* Misma posición que account-manage */
-  width: 327px; /* Mismo ancho que account-manage */
+  top: 33px;
+  left: 51px;
+  width: 327px;
   height: 45px;
-  font-size: 40px !important; /* Mismo tamaño que account-manage */
-  font-family: var(--font-main); /* ADLaM Display */
-  color: var(--color-primary); /* Primary color */
+  font-size: 40px !important;
+  font-family: var(--font-main);
+  color: var(--color-primary);
   margin: 0;
   padding: 0;
-  font-weight: 400; /* Mismo peso que account-manage */
+  font-weight: 400;
   text-align: center;
 }
 
-/* Textfields no modificables - Bordes cuadrados */
+/* Textfields no modificables */
 .readonly-field {
   position: absolute;
-  width: 367px;  
+  width: 367px;
   left: 32px;
-
-  
 }
 
 .readonly-field-1 {
   top: 133px;
-
 }
 
 .readonly-field-2 {
@@ -100,31 +121,31 @@
 
 .readonly-input {
   width: 100%;
-  height: 56px; /* Altura actualizada a 56px */
+  height: 56px;
   background-color: var(--color-white);
   border: 2px solid var(--color-primary);
-  border-radius: 0; /* Bordes completamente cuadrados */
+  border-radius: 0;
   padding: 0 16px;
   font-family: var(--font-main);
-  font-size: 20px; /* Tamaño 20px como solicitado */
+  font-size: 20px;
   color: var(--color-title);
   box-sizing: border-box;
 }
 
-/* Botón Eliminar - Texto 24px */
+/* Botón Eliminar */
 .delete-button {
   position: absolute;
   top: 534px;
-  left: 108px;  
+  left: 108px;
   width: 216px;
   height: 50px;
   background-color: var(--color-alert);
   border: 2px solid var(--color-alert);
-  border-radius: var(--border-radius-sm); /* Mismo border radius que account-manage */
+  border-radius: var(--border-radius-sm);
   color: var(--color-white);
   font-family: var(--font-main);
-  font-size: 24px; /* Tamaño 24px como solicitado */
-  font-weight: 500; /* Mismo peso que account-manage */
+  font-size: 24px;
+  font-weight: 500;
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -134,7 +155,7 @@
   border-color: #D73E47;
 }
 
-/* Título Añadir Integrante - Mismo estilo que account-manage */
+/* Título Añadir Integrante */
 .add-member-title {
   position: absolute;
   top: 33px;
@@ -151,16 +172,16 @@
   text-align: center;
 }
 
-/* Input Group - Contenedor principal */
+/* Input Group */
 .input-group {
   position: absolute;
   top: 133px;
-  left: 58px; 
+  left: 58px;
   right: 60px;
 }
 
 .input-container {
-  position: relative; /* Contenedor relativo para el input y botón */
+  position: relative;
   display: inline-block;
   width: 312px;
 }
@@ -170,10 +191,10 @@
   left: 12px;
   top: 0;
   transform: translateY(-50%);
-  font-size: var(--text-base); /* 16px */
-  color: var(--color-body); /* Label color using variable */
+  font-size: var(--text-base);
+  color: var(--color-body);
   font-family: var(--font-main);
-  background: var(--color-background); /* Label background using variable */
+  background: var(--color-background);
   padding: 0 4px;
   pointer-events: none;
   transition: all 0.2s ease-in-out;
@@ -181,14 +202,14 @@
 }
 
 .email-input {
-  width: 100%; /* Ocupa todo el ancho del contenedor */
-  height: 56px; /* Altura estándar */
-  padding: 16px 48px 16px 16px; /* Extra space on right for clear button */
-  border: 2px solid var(--color-accent); /* Border using accent color */
-  border-radius: var(--border-radius-sm); /* Square appearance */
-  font-size: 20px; /* Tamaño 20px como solicitado */
+  width: 100%;
+  height: 56px;
+  padding: 16px 48px 16px 16px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  font-size: 20px;
   font-family: var(--font-main);
-  background: var(--color-background); /* Background using variable */
+  background: var(--color-background);
   transition: all 0.2s ease-in-out;
   box-sizing: border-box;
 }
@@ -204,12 +225,12 @@
   font-weight: 500;
 }
 
-/* Botón de limpiar dentro del input */
+/* Botón de limpiar */
 .clear-button {
   position: absolute;
-  right: 12px; /* 12px desde el borde derecho */
+  right: 12px;
   top: 50%;
-  transform: translateY(-50%); /* Centrado verticalmente */
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
@@ -234,11 +255,11 @@
 }
 
 .email-input::placeholder {
-  color: var(--color-placeholder-light); /* Placeholder color with 25% transparency */
+  color: var(--color-placeholder-light);
   font-weight: 400;
 }
 
-/* Clear input button - Dentro del input */
+/* Clear input button */
 .clear-btn {
   position: absolute;
   right: 12px;
@@ -246,7 +267,7 @@
   transform: translateY(-50%);
   width: 24px;
   height: 24px;
-  border: 2px solid var(--color-accent); /* Accent color border */
+  border: 2px solid var(--color-accent);
   border-radius: 50%;
   background: transparent;
   cursor: pointer;
@@ -258,7 +279,7 @@
   transition: all 0.2s ease-in-out;
   padding: 0;
   margin: 0;
-  z-index: 10; /* Asegurar que esté por encima del input */
+  z-index: 10;
 }
 
 .clear-btn.visible {
@@ -267,14 +288,14 @@
 }
 
 .clear-btn:hover {
-  background: var(--color-accent); /* Accent color background on hover */
+  background: var(--color-accent);
   color: var(--color-white);
 }
 
 .clear-icon {
   width: 16px;
   height: 16px;
-  color: var(--color-accent); /* Accent color */
+  color: var(--color-accent);
   transition: color 0.2s ease-in-out;
 }
 
@@ -282,20 +303,20 @@
   color: var(--color-white);
 }
 
-/* Botón Añadir - Texto 24px */
+/* Botón Añadir */
 .add-button {
   position: absolute;
   top: 534px;
-  left: 105px;  
+  left: 105px;
   width: 215px;
   height: 50px;
   background-color: var(--color-primary);
   border: 2px solid var(--color-primary);
-  border-radius: var(--border-radius-sm); /* Mismo border radius que account-manage */
+  border-radius: var(--border-radius-sm);
   color: var(--color-white);
   font-family: var(--font-main);
-  font-size: 24px; /* Tamaño 24px como solicitado */
-  font-weight: 500; /* Mismo peso que account-manage */
+  font-size: 24px;
+  font-weight: 500;
   cursor: pointer;
   transition: var(--transition-fast);
 }
@@ -305,19 +326,20 @@
   border-color: var(--color-secondary);
 }
 
-/* Responsive adjustments */
+/* Responsive con apilado + escalado */
 @media (max-width: 900px) {
   .family-group-container {
     flex-direction: column;
-    gap: 10px; /* Espacio mínimo en responsive */
-    padding: 20px;
+    justify-content: flex-start;
+    align-items: center;
     overflow-y: auto;
-    position: relative;
+    padding: 20px;
   }
-  
-  .family-card,
-  .add-member-card {
-    width: 90%;
-    max-width: 430px;
+
+  .cards-wrapper {
+    flex-direction: column;
+    gap: 20px;
+    transform: scale(0.85);
+    transform-origin: top center;
   }
 }
