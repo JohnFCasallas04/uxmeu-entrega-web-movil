@@ -1,194 +1,337 @@
 * {
-  font-family: var(--font-main), var(--font-fallback); /* ADLaM Display for all elements */
+    font-family: var(--font-main), var(--font-fallback);
+    /* ADLaM Display for all elements */
 }
 
 /* Main menu container */
 .menu-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  padding: var(--spacing-xl);
-  background: var(--color-white); /* Fondo blanco para la página */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--spacing-xl);
+    background: var(--color-white);
+    /* Fondo blanco para la página */
 }
 
 /* Main menu card */
 .menu-card {
-  width: 1200px;
-  height: 610px;
-  background: var(--color-background); /* Fondo color-background para el card */
-  border: 2px solid var(--color-primary); /* Primary color border #5C86D6 */
-  border-radius: 0; /* Square corners */
-  box-shadow: var(--shadow-lg);
-  position: relative; /* Establecer contexto de posicionamiento */
-  padding: var(--spacing-xl);
-  box-sizing: border-box;
+    width: 1200px;
+    height: 610px;
+    background: var(--color-background);
+    /* Fondo color-background para el card */
+    border: 2px solid var(--color-primary);
+    /* Primary color border #5C86D6 */
+    border-radius: 0;
+    /* Square corners */
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    /* Establecer contexto de posicionamiento */
+    padding: var(--spacing-xl);
+    box-sizing: border-box;
 }
 
 /* Menu header section */
 .menu-header {
-  position: absolute;
-  top: 12px;
-  left: 50%;
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  width: calc(100% - 48px); /* Ancho completo menos padding */
-  text-align: center;
+    position: absolute;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centrar horizontalmente */
+    width: calc(100% - 48px);
+    /* Ancho completo menos padding */
+    text-align: center;
 }
 
 .menu-title {
-  font-size: var(--text-5xl) !important; /* 48px consistent with other titles */
-  font-family: var(--font-main); /* ADLaM Display */
-  color: var(--color-primary); /* Primary color */
-  margin: 0;
-  font-weight: 400;
+    font-size: var(--text-5xl) !important;
+    /* 48px consistent with other titles */
+    font-family: var(--font-main);
+    /* ADLaM Display */
+    color: var(--color-primary);
+    /* Primary color */
+    margin: 0;
+    font-weight: 400;
 }
 
 /* Main menu content */
 .menu-content {
-  position: absolute;
-  top: 140px; /* Posición desde la parte superior del card */
-  left: 50%;
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  width: calc(100% - 48px); /* Ancho completo menos padding */
+    position: absolute;
+    top: 140px;
+    /* Posición desde la parte superior del card */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centrar horizontalmente */
+    width: calc(100% - 48px);
+    /* Ancho completo menos padding */
 }
 
 /* Menu options container */
 .menu-options {
-  display: flex;
-  gap: var(--spacing-4xl); /* Spacing between options */
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Contexto para posicionamiento de opciones individuales */
+    display: flex;
+    gap: var(--spacing-4xl);
+    /* Spacing between options */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* Contexto para posicionamiento de opciones individuales */
 }
 
 /* Individual menu option */
 .menu-option {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  cursor: pointer;
-  transition: none; /* Eliminar todas las transiciones */
-  padding: 0; /* Quitar padding para eliminar los recuadros */
-  border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: none;
+    /* Eliminar todas las transiciones */
+    padding: 0;
+    /* Quitar padding para eliminar los recuadros */
+    border-radius: var(--border-radius-lg);
 }
 
 /* Opciones específicas con posicionamiento absoluto relativo al card */
-.menu-option:nth-child(1) { /* Gestionar Cuenta */
-  position: absolute;
-  top: 13px;
-  left: 50px; /* Posición desde la izquierda del contenedor de opciones */
+.menu-option:nth-child(1) {
+    /* Gestionar Cuenta */
+    position: absolute;
+    top: 13px;
+    left: 50px;
+    /* Posición desde la izquierda del contenedor de opciones */
 }
 
-.menu-option:nth-child(2) { /* Grupos Familiares */
-  position: absolute;
-  top: 13px;
-  left: 50%; /* Centrar horizontalmente */
-  transform: translateX(-50%); /* Ajustar para centrado perfecto */
+.menu-option:nth-child(2) {
+    /* Grupos Familiares */
+    position: absolute;
+    top: 13px;
+    left: 50%;
+    /* Centrar horizontalmente */
+    transform: translateX(-50%);
+    /* Ajustar para centrado perfecto */
 }
 
-.menu-option:nth-child(3) { /* Gestionar Calendario */
-  position: absolute;
-  top: 13px;
-  right: 50px; /* 76px desde el borde derecho del card */
+.menu-option:nth-child(3) {
+    /* Gestionar Calendario */
+    position: absolute;
+    top: 13px;
+    right: 50px;
+    /* 76px desde el borde derecho del card */
 }
 
 /* Image placeholder container */
 .option-image-placeholder {
-  margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
 }
 
 .image-placeholder {
-  width: 230px;
-  height: 230px;
-  border-radius: var(--border-radius-lg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: var(--text-lg);
-  color: var(--color-white);
-  font-weight: 500;
-  transition: none; /* Eliminar transiciones de la imagen */
+    width: 230px;
+    height: 230px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-lg);
+    color: var(--color-white);
+    font-weight: 500;
+    transition: none;
+    /* Eliminar transiciones de la imagen */
 }
 
 /* Specific images for each option */
 .account-image {
-  background-image: url('/assets/images/gestionar_cuenta.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('/assets/images/gestionar_cuenta.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .groups-image {
-  background-image: url('/assets/images/grupos_familiares.png');
-  background-size: 105%; /* Tamaño ajustado para que se vea proporcionalmente igual */
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 50%; /* Hacer la imagen completamente redonda */
+    background-image: url('/assets/images/grupos_familiares.png');
+    background-size: 105%;
+    /* Tamaño ajustado para que se vea proporcionalmente igual */
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    /* Hacer la imagen completamente redonda */
 }
 
 .calendar-image {
-  background-image: url('/assets/images/calendarios.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    background-image: url('/assets/images/calendarios.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Option titles */
 .option-title {
-  font-size: var(--text-xl); /* 20px as requested */
-  font-family: var(--font-main); /* ADLaM Display */
-  color: var(--color-primary); /* Primary color */
-  margin: 0;
-  text-align: center;
-  font-weight: 400;
-  transition: color var(--transition-fast);
+    font-size: var(--text-xl);
+    /* 20px as requested */
+    font-family: var(--font-main);
+    /* ADLaM Display */
+    color: var(--color-primary);
+    /* Primary color */
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    transition: color var(--transition-fast);
 }
 
 .menu-option:hover .option-title {
-  color: var(--color-secondary);
+    color: var(--color-secondary);
 }
 
 /* Menu footer */
 .menu-footer {
-  position: absolute;
-  top: 530px; /* 530px desde la parte superior del card */
-  left: 50%;
-  transform: translateX(-50%); /* Centrar horizontalmente */
-  width: calc(100% - 48px); /* Ancho completo menos padding */
-  display: flex;
-  justify-content: center;
+    position: absolute;
+    top: 530px;
+    /* 530px desde la parte superior del card */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Centrar horizontalmente */
+    width: calc(100% - 48px);
+    /* Ancho completo menos padding */
+    display: flex;
+    justify-content: center;
 }
 
 /* Exit button */
 .btn-exit {
-  width: 278px; /* Same width as other buttons */
-  height: 50px; /* Same height as other buttons */
-  font-size: var(--text-2xl); /* 24px */
-  font-weight: 500;
+    width: 278px;
+    /* Same width as other buttons */
+    height: 50px;
+    /* Same height as other buttons */
+    font-size: var(--text-2xl);
+    /* 24px */
+    font-weight: 500;
 }
 
 .btn-alert {
-  background: var(--color-alert);
-  color: var(--color-white);
-  border: 2px solid var(--color-alert);
-  border-radius: var(--border-radius-sm);
-  cursor: pointer;
-  transition: background-color var(--transition-fast), border-color var(--transition-fast); /* Solo transiciones de color */
+    background: var(--color-alert);
+    color: var(--color-white);
+    border: 2px solid var(--color-alert);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    /* Solo transiciones de color */
 }
 
 .btn-alert:hover {
-  background: #D73E47; /* Darker alert color */
-  border-color: #D73E47;
-  /* Eliminar transform y box-shadow para mantener solo el destello de color */
+    background: #D73E47;
+    /* Darker alert color */
+    border-color: #D73E47;
+    /* Eliminar transform y box-shadow para mantener solo el destello de color */
 }
 
 /* Enhanced focus states */
 .menu-option:focus {
-  outline: 2px solid var(--color-primary);
-  outline-offset: 2px;
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }
 
 .btn-alert:focus {
-  outline: 2px solid var(--color-alert);
-  outline-offset: 2px;
+    outline: 2px solid var(--color-alert);
+    outline-offset: 2px;
+}
+
+/* Wrapper de escala para menú */
+.menu-scale {
+    transform-origin: top center;
+    --__scale: calc(100vw / var(--viewport-width));
+    /* 1440px base */
+    --__scale-clamped: min(1, var(--__scale));
+    /* no escales más de 1 */
+    transform: scale(var(--__scale-clamped));
+    will-change: transform;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Mantén tamaño fijo del card, la escala se encarga de ajustarlo */
+.menu-card {
+    width: 1200px;
+    height: 610px;
+    margin: 0 auto;
+}
+
+.image-placeholder {
+    background-size: contain;
+    /* se ajusta al contenedor */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    /* mantiene proporción */
+}
+
+/* Fallback: cuando ya no hay espacio, pasar a layout vertical */
+@media (max-width: 940px) {
+  .menu-scale {
+    transform: none;
+  }
+
+  .menu-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .menu-content {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .menu-options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    position: static;
+  }
+
+  .menu-option {
+    position: static !important;
+    transform: none !important;
+    width: 80%;
+    max-width: 300px;
+  }
+
+  .image-placeholder {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
+
+  /* 🔧 Ajuste clave para el botón */
+  .menu-footer {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    width: 100% !important;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .btn-exit {
+    display: block;
+    margin: 0 auto;
+  }
+  /* Título más pequeño */
+  .menu-title {
+    font-size: var(--text-3xl) !important; /* en lugar de 48px, algo como 28–32px */
+  }
+
+  /* Botón de salida más compacto */
+  .btn-exit {
+    width: 200px;   /* más angosto que los 278px */
+    height: 40px;   /* más bajo que los 50px */
+    font-size: var(--text-lg); /* reduce tipografía */
+  }
 }
