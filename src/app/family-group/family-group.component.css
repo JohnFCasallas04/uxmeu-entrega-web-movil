@@ -60,7 +60,7 @@
 }
 
 /* Botón Volver */
-.back-button {
+.back-btn {
   position: absolute;
   top: 6px;
   left: 5px;
@@ -87,7 +87,7 @@
 /* Título Grupo Familiar */
 .family-title {
   position: absolute;
-  top: 33px;
+  top: 30px;
   left: 51px;
   width: 327px;
   height: 45px;
@@ -149,7 +149,7 @@
 /* Título Añadir Integrante */
 .add-member-title {
   position: absolute;
-  top: 33px;
+  top: 26px;
   left: 50px;
   width: 327px;
   height: 45px;
@@ -235,6 +235,10 @@
   transition: background-color 0.2s ease;
 }
 
+.clear-button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
 .clear-button svg {
   width: 16px;
   height: 16px;
@@ -274,6 +278,11 @@
   visibility: visible;
 }
 
+.clear-btn:hover {
+  background: var(--color-accent);
+  color: var(--color-white);
+}
+
 .clear-icon {
   width: 16px;
   height: 16px;
@@ -302,6 +311,12 @@
   cursor: pointer;
   transition: var(--transition-fast);
 }
+
+.add-button:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+}
+
 /* Responsive con apilado + escalado */
 @media (max-width: 900px) {
   .family-group-container {
