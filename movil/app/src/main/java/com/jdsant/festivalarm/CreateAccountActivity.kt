@@ -35,9 +35,16 @@ class CreateAccountActivity : AppCompatActivity() {
 
       // Lógica botones
       val cancelBtn = findViewById<Button>(R.id.cancelBtn)
+      val registerBtn = findViewById<Button>(R.id.registerBtn)
 
       // Configura el OnClickListener para el botón
       cancelBtn.setOnClickListener {
+        // Crea un Intent para iniciar CreateAccountActivity
+        val intent = Intent(this, MainActivity::class.java)
+        // Inicia la nueva actividad
+        startActivity(intent)
+      }
+      registerBtn.setOnClickListener {
         // Crea un Intent para iniciar CreateAccountActivity
         val intent = Intent(this, MainActivity::class.java)
         // Inicia la nueva actividad
