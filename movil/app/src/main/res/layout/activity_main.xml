@@ -73,49 +73,48 @@
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent">
 
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/usuarioLoginInput"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="vertical">
+      android:layout_marginTop="32dp"
+      app:boxBackgroundMode="outline"
+      app:boxStrokeColor="@color/color_acentuar"
+      app:boxStrokeWidth="2dp"
+      app:hintTextColor="@color/color_acentuar">
 
-      <EditText
+      <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/usuarioLoginText"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="24dp"
-        android:background="@drawable/text_field"
-        android:ems="10"
-        android:hint="Usuario"
         android:inputType="text"
-        android:textColor="@color/color_cuerpo"
-        android:textColorHighlight="@color/color_acentuar"
-        android:textColorHint="@color/color_placeholder" />
+        android:text="Usuario"
+        android:textColor="@color/color_placeholder" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
-
-    <LinearLayout
+    <com.google.android.material.textfield.TextInputLayout
       android:id="@+id/passwordLoginInput"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:orientation="vertical">
+      android:layout_marginTop="32dp"
+      app:boxBackgroundMode="outline"
+      app:boxStrokeColor="@color/color_acentuar"
+      app:boxStrokeWidth="2dp"
+      app:hintTextColor="@color/color_acentuar">
 
-      <EditText
+      <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/passwordLoginText"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginVertical="24dp"
-        android:background="@drawable/text_field"
-        android:ems="10"
-        android:hint="Contraseña"
         android:inputType="text"
-        android:textColor="@color/color_cuerpo"
-        android:textColorHighlight="@color/color_acentuar"
-        android:textColorHint="@color/color_placeholder" />
-
-    </LinearLayout>
+        android:text="Contraseña"
+        android:password="true"
+        android:textColor="@color/color_placeholder" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
       android:id="@+id/loginBtn"

@@ -5,4 +5,6 @@
   <string name="textoResetPassBtn">¿Olvidaste la contraseña?</string>
   <string name="textoSignUpBtn">Registrarse</string>
   <string name="logoAppText">Logo App</string>
+  <string name="createAccountTitleText">Regístrate</string>
+  <string name="createAccountText">Ingresa los datos requeridos para registrarte</string>
 </resources>
