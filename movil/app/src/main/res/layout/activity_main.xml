@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+  <ImageView
+    android:id="@+id/fondo"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:contentDescription="@string/fondo_login_string_name"
+    android:scaleType="centerCrop"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:srcCompat="@drawable/fondo" />
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/Superior"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    app:layout_constraintBottom_toTopOf="@+id/inferior"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <LinearLayout
+      android:id="@+id/marcaLayout"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="48dp"
+      android:layout_marginStart="48dp"
+      android:layout_marginTop="48dp"
+      android:layout_marginEnd="48dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+
+      <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/logoAppText"
+        android:cropToPadding="false"
+        android:scaleType="centerInside"
+        app:srcCompat="@drawable/deadline" />
+
+      <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.1"
+        android:text="@string/app_name"
+        android:textColor="@color/color_principal"
+        android:textSize="40sp" />
+    </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <LinearLayout
+    android:id="@+id/inferior"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <LinearLayout
+      android:id="@+id/usuarioLoginInput"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <EditText
+        android:id="@+id/usuarioLoginText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="24dp"
+        android:background="@drawable/text_field"
+        android:ems="10"
+        android:hint="Usuario"
+        android:inputType="text"
+        android:textColor="@color/color_cuerpo"
+        android:textColorHighlight="@color/color_acentuar"
+        android:textColorHint="@color/color_placeholder" />
+
+    </LinearLayout>
+
+    <LinearLayout
+      android:id="@+id/passwordLoginInput"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+      <EditText
+        android:id="@+id/passwordLoginText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginVertical="24dp"
+        android:background="@drawable/text_field"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="text"
+        android:textColor="@color/color_cuerpo"
+        android:textColorHighlight="@color/color_acentuar"
+        android:textColorHint="@color/color_placeholder" />
+
+    </LinearLayout>
+
+    <Button
+      android:id="@+id/loginBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center_horizontal"
+      android:layout_marginHorizontal="48dp"
+      android:layout_marginVertical="2dp"
+      android:backgroundTint="@color/color_principal"
+      android:fontFamily="@font/adlam_display"
+      android:text="@string/textoLoginBtn"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      app:cornerRadius="10dp" />
+
+    <Button
+      android:id="@+id/resetPassBtn"
+      style="@style/Widget.AppCompat.Button.Borderless"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="48dp"
+      android:layout_marginVertical="2dp"
+      android:text="@string/textoResetPassBtn"
+      android:textAllCaps="false"
+      android:textColor="@color/color_cuerpo"
+      android:visibility="visible" />
+
+    <Button
+      android:id="@+id/signUpBtn"
+      style="@style/Widget.AppCompat.Button.Borderless"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginHorizontal="48dp"
+      android:layout_marginVertical="2dp"
+      android:text="@string/textoSignUpBtn"
+      android:textAllCaps="false"
+      android:textColor="@color/color_acentuar"
+      android:visibility="visible" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout >

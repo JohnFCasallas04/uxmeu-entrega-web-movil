@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
-
-    <style name="Theme.MyApplication" parent="android:Theme.Material.Light.NoActionBar" />
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Base application theme. -->
+  <style name="Theme.FestivalArm" parent="Theme.AppCompat.NoActionBar">
+    <item name="android:fontFamily">@font/adlam_display</item> <!-- For API 26+ -->
+    <item name="fontFamily">@font/adlam_display</item>
+  </style>
 </resources>

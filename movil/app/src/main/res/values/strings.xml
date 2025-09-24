@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">FestivAlarm</string>
+  <string name="app_name">FestivAlarm</string>
+  <string name="fondo_login_string_name">Fondo login</string>
+  <string name="textoLoginBtn">Iniciar Sesión</string>
+  <string name="textoResetPassBtn">¿Olvidaste la contraseña?</string>
+  <string name="textoSignUpBtn">Registrarse</string>
+  <string name="logoAppText">Logo App</string>
 </resources>
