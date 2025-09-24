@@ -1,7 +1,9 @@
 package com.jdsant.festivalarm
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.EditText
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +32,17 @@ class CreateAccountActivity : AppCompatActivity() {
         setupClearOnFocus(apellidosEditText, "Ingrese sus apellidos")
         setupClearOnFocus(correoEditText, "Ingrese su correo")
         setupClearOnFocus(claveEditText, "Ingrese su contraseña")
+
+      // Lógica botones
+      val cancelBtn = findViewById<Button>(R.id.cancelBtn)
+
+      // Configura el OnClickListener para el botón
+      cancelBtn.setOnClickListener {
+        // Crea un Intent para iniciar CreateAccountActivity
+        val intent = Intent(this, MainActivity::class.java)
+        // Inicia la nueva actividad
+        startActivity(intent)
+      }
 
     }
 
