@@ -10,6 +10,9 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.FestivalArm">
     <activity
+      android:name=".ModifyLaboralWeek"
+      android:exported="false" />
+    <activity
       android:name=".ModifyCalendar"
       android:exported="false" />
     <activity

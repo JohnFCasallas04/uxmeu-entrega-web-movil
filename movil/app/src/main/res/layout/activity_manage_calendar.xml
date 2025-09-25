@@ -151,7 +151,7 @@
           app:layout_constraintTop_toTopOf="parent">
 
           <ImageView
-            android:id="@+id/secondAlarmIcon"
+            android:id="@+id/modifyWeekIcon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight=".5"
@@ -160,7 +160,7 @@
             app:srcCompat="@drawable/calendar_work" />
 
           <TextView
-            android:id="@+id/secondAlarmHour"
+            android:id="@+id/modifyWeek"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
