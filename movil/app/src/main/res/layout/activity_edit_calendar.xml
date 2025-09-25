@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".EditHolidaysActivity">
+
+  <!-- Título con ícono centrados -->
+  <LinearLayout
+    android:id="@+id/titleCreateAccount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+      android:id="@+id/createAccountLogo"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="8dp"
+      android:scaleType="fitCenter"
+      app:srcCompat="@drawable/edit" />
+
+    <TextView
+      android:id="@+id/createAccountTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Modificar Festivos"
+      android:textColor="@android:color/black"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+  </LinearLayout>
+
+  <!-- Subtítulo -->
+  <TextView
+    android:id="@+id/Subtitulo"
+    android:layout_width="142dp"
+    android:layout_height="20dp"
+    android:layout_marginTop="81dp"
+    android:text="Calendario Colombia"
+    android:textColor="#6B7280"
+    android:textSize="14sp"
+    android:gravity="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+  <!-- Card con calendario -->
+  <androidx.cardview.widget.CardView
+    android:id="@+id/calendarCard"
+    android:layout_width="258dp"
+    android:layout_height="335dp"
+    android:layout_marginTop="104dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <CalendarView
+      android:id="@+id/calendarView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="#79C7C5"
+      android:dateTextAppearance="@style/CalendarDateTextStyle"
+      android:weekDayTextAppearance="@style/CalendarWeekDayTextStyle"
+      android:selectedDateVerticalBar="#E84B54"
+      android:focusedMonthDateColor="#FFFFFF"
+      android:unfocusedMonthDateColor="#1F2933" />
+  </androidx.cardview.widget.CardView>
+
+  <!-- Descripción -->
+  <TextView
+    android:id="@+id/Descripcion"
+    android:layout_width="225dp"
+    android:layout_height="66dp"
+    android:layout_marginTop="444dp"
+    android:gravity="center"
+    android:text="Actualice los festivos precargados ya sea eliminando o agregando nuevos festivos"
+    android:textAlignment="center"
+    android:textColor="#6B7280"
+    android:textSize="12sp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+  <!-- Botones -->
+  <LinearLayout
+    android:id="@+id/createAccountBtnSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="2"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+      android:id="@+id/saveBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="12dp"
+      android:layout_weight="1"
+      android:backgroundTint="#5C86D6"
+      android:text="Guardar"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:cornerRadius="50dp" />
+
+    <Button
+      android:id="@+id/cancelBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="12dp"
+      android:layout_weight="1"
+      android:backgroundTint="#E84B54"
+      android:text="Cancelar"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:cornerRadius="50dp" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
