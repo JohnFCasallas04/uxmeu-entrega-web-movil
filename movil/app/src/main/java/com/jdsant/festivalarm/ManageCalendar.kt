@@ -30,6 +30,7 @@ class ManageCalendar : AppCompatActivity() {
       bottomNavigationView.setOnNavigationItemSelectedListener {
         when (it.itemId) {
           R.id.listAlarms -> startActivity(Intent(this, ListAlarm::class.java))
+          R.id.grFam -> startActivity(Intent(this, FamilyGroups::class.java))
           }
           true
         }

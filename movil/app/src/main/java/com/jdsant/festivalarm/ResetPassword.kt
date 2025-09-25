@@ -25,20 +25,10 @@ class ResetPassword : AppCompatActivity() {
         startActivity(intent)
       }
       resetPassBtn.setOnClickListener {
-        // Crea el dialogo PopUp
-        // Crear y mostrar el AlertDialog
-        AlertDialog.Builder(this)
-          .setTitle("Información de Restablecimiento")
-          .setMessage("Se envio un enlace de recuperación de contraseña.")
-          .setPositiveButton("Aceptar") { dialog, _ ->
-            // Esta acción se ejecuta cuando el usuario presiona "Entendido"
-            dialog.dismiss() // Cierra el diálogo
-            // Podrías añadir más lógica aquí si es necesario,
-            // como navegar a otra pantalla o realizar otra acción.
-          }
-          // Opcional: Si quieres que no se pueda cerrar tocando fuera o con el botón atrás
-          .setCancelable(false)
-          .show()
+        // Crea un Intent para iniciar CreateAccountActivity
+        val intent = Intent(this, MainActivity::class.java)
+        // Inicia la nueva actividad
+        startActivity(intent)
       }
     }
 }

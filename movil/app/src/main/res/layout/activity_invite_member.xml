@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-  xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:app="http://schemas.android.com/apk/res-auto"
   xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/main"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  tools:context=".CreateAccountActivity">
+  tools:context=".InviteMember">
 
   <!-- Título con ícono centrados -->
   <LinearLayout
@@ -61,10 +61,13 @@
       style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
       android:layout_width="match_parent"
       android:layout_height="wrap_content"
-      android:hint="Ingrese su correo electrónico"
       android:inputType="textEmailAddress"
+      android:text="Ingrese su correo"
       android:textColor="@color/color_placeholder" />
+
   </com.google.android.material.textfield.TextInputLayout>
+
+
 
   <!-- Botones -->
   <LinearLayout
@@ -80,7 +83,7 @@
     app:layout_constraintStart_toStartOf="parent">
 
     <Button
-      android:id="@+id/resetPassBtn"
+      android:id="@+id/inviteBtn"
       android:layout_width="0dp"
       android:layout_height="wrap_content"
       android:layout_margin="24dp"
@@ -117,6 +120,5 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintEnd_toEndOf="parent"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,11 +19,10 @@ class ListAlarm : AppCompatActivity() {
       val createAlarmBtn = findViewById<ImageButton>(R.id.createAlarmBtn)
       val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
 
-      val gesCalendarios = ManageCalendar()
-
       bottomNavigationView.setOnNavigationItemSelectedListener {
         when (it.itemId) {
-          R.id.gesCal -> startActivity(Intent(this, gesCalendarios::class.java))
+          R.id.gesCal -> startActivity(Intent(this, ManageCalendar::class.java))
+          R.id.grFam -> startActivity(Intent(this, FamilyGroups::class.java))
           }
           true
         }

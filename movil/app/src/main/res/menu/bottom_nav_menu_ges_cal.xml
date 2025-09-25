@@ -7,7 +7,7 @@
     android:icon="@drawable/alarm_clock"
     android:title="Alarmas" />
   <item
-    android:id="@+id/gesCal"
+    android:id="@+id/grFam"
     android:title="Gr. familiares"
     android:icon="@drawable/user"/>
 </menu>
