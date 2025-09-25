@@ -70,9 +70,7 @@
       android:background="#79C7C5"
       android:dateTextAppearance="@style/CalendarDateTextStyle"
       android:weekDayTextAppearance="@style/CalendarWeekDayTextStyle"
-      android:selectedDateVerticalBar="#E84B54"
-      android:focusedMonthDateColor="#FFFFFF"
-      android:unfocusedMonthDateColor="#1F2933" />
+      android:focusedMonthDateColor="#FFFFFF"/>
   </androidx.cardview.widget.CardView>
 
   <!-- Descripción -->
