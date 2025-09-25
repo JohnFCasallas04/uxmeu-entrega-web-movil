@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FamilyGroups">
+
+  <LinearLayout
+    android:id="@+id/titleFamilyGroups"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="32dp"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+      android:id="@+id/familyGroupsLogo"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight=".5"
+      android:clickable="false"
+      android:scaleType="fitEnd"
+      app:srcCompat="@drawable/user" />
+
+    <TextView
+      android:id="@+id/listAlarmTitle"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center_vertical"
+      android:text="Grupo familiar"
+      android:textAlignment="center"
+      android:textColor="@color/color_titulo"
+      android:textSize="22sp"/>
+
+    <!-- Añadir el Lineal Layout vertical para el boton de cerrar sesion y el texto de cerrar sesion -->
+    <LinearLayout
+      android:id="@+id/logoutSection"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight=".5"
+      android:weightSum="2"
+      android:orientation="vertical"
+      android:gravity="center_horizontal|center_vertical">
+
+      <ImageButton
+        android:id="@+id/logoutButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:src="@drawable/alarm_clock"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Cerrar Sesión"
+        android:scaleType="centerInside"/>
+
+      <TextView
+        android:id="@+id/logoutText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cerrar \nSesión"
+        android:gravity="center_vertical"
+        android:layout_weight="0"
+        android:textSize="10sp" />
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/bodyFamilyGroups"
+    android:layout_width="409dp"
+    android:layout_height="751dp"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/titleFamilyGroups">
+
+
+    <LinearLayout
+      android:id="@+id/listMembers"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical">
+
+      <LinearLayout
+        android:id="@+id/inviteSection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:id="@+id/inviteOption"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_margin="32dp"
+          android:orientation="horizontal"
+          android:weightSum="2"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <TextView
+            android:id="@+id/helperTxt"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:text="Gestione los miembros de su grupo familiar"
+            android:textAlignment="center"
+            android:textSize="12sp" />
+
+          <!-- Añadir el Lineal Layout vertical para el boton de cerrar sesion y el texto de cerrar sesion -->
+          <LinearLayout
+            android:id="@+id/membersAlarm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".26"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageButton
+              android:id="@+id/membersAlarmBtn"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:background="?attr/selectableItemBackgroundBorderless"
+              android:contentDescription="Cerrar Sesión"
+              android:scaleType="centerInside"
+              android:src="@drawable/team_management" />
+
+            <TextView
+              android:id="@+id/membersAlarmTxt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight=".5"
+              android:gravity="center_vertical"
+              android:text="Alarmas"
+              android:textSize="10sp" />
+          </LinearLayout>
+
+          <!-- Añadir el Lineal Layout vertical para el boton de cerrar sesion y el texto de cerrar sesion -->
+          <LinearLayout
+            android:id="@+id/inviteMember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageButton
+              android:id="@+id/inviteMemberBtn"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:background="?attr/selectableItemBackgroundBorderless"
+              android:contentDescription="Cerrar Sesión"
+              android:scaleType="centerInside"
+              android:src="@drawable/add" />
+
+            <TextView
+              android:id="@+id/inviteMemberTxt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight=".5"
+              android:gravity="center_vertical"
+              android:text="Invitar"
+              android:textSize="10sp" />
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+      <LinearLayout
+        android:id="@+id/firstMember"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+          android:id="@+id/itemsFirstMember"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:layout_margin="32dp"
+          android:orientation="horizontal"
+          android:weightSum="2"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent">
+
+          <ImageView
+            android:id="@+id/firsMemberIcon"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight=".5"
+            android:clickable="false"
+            android:scaleType="fitEnd"
+            android:src="@drawable/user" />
+
+
+          <TextView
+            android:id="@+id/firstMemberName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Juan Perez"
+            android:textAlignment="textStart"
+            android:textSize="25sp"/>
+
+          <!-- Añadir el Lineal Layout vertical para el boton de cerrar sesion y el texto de cerrar sesion -->
+
+          <LinearLayout
+            android:id="@+id/deleteFirstMember"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".4"
+            android:gravity="center_horizontal|center_vertical"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <ImageButton
+              android:id="@+id/deleteFirstAlarmBtn"
+              android:layout_width="match_parent"
+              android:layout_height="0dp"
+              android:layout_weight="1"
+              android:background="?attr/selectableItemBackgroundBorderless"
+              android:contentDescription="Borrar"
+              android:scaleType="centerInside"
+              android:src="@drawable/remove" />
+
+            <TextView
+              android:id="@+id/deleteFirstAlarmTxt"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_weight=".5"
+              android:gravity="center_vertical"
+              android:text="Eliminar"
+              android:textSize="10sp" />
+
+          </LinearLayout>
+
+        </LinearLayout>
+
+      </LinearLayout>
+
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <com.google.android.material.bottomnavigation.BottomNavigationView
+    android:id="@+id/bottomNavigationView"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:background="@color/color_acentuar"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:menu="@menu/bottom_nav_menu_gr_fam" />
+</androidx.constraintlayout.widget.ConstraintLayout>

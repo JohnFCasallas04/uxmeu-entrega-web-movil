@@ -1,0 +1,189 @@
+/* Configuración tipográfica global */
+* {
+    font-family: var(--font-main), var(--font-fallback);
+}
+
+/* Contenedor principal del menú */
+.menu-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: var(--spacing-xl);
+    background: var(--color-white);
+}
+
+/* Tarjeta principal del menú */
+.menu-card {
+    width: 1200px;
+    height: 610px;
+    background: var(--color-background);
+    border: 2px solid var(--color-primary);
+    border-radius: 0;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    padding: var(--spacing-xl);
+    box-sizing: border-box;
+}
+
+/* Encabezado del menú */
+.menu-header {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    text-align: center;
+}
+
+.menu-title {
+    font-size: var(--text-5xl) !important;
+    font-family: var(--font-main);
+    color: var(--color-primary);
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+/* Contenido principal del menú */
+.menu-content {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+}
+
+/* Contenedor de opciones */
+.menu-options {
+    display: flex;
+    gap: var(--spacing-4xl);
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Opción individual del menú */
+.menu-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: none;
+    padding: 0;
+    border-radius: var(--border-radius-lg);
+}
+
+/* Posicionamiento de opciones específicas */
+.menu-option:nth-child(1) {
+    position: absolute;
+    top: 15px;
+    left: 50px;
+}
+
+.menu-option:nth-child(2) {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.menu-option:nth-child(3) {
+    position: absolute;
+    top: 15px;
+    right: 50px;
+}
+
+/* Contenedor de imagen */
+.option-image-placeholder {
+    margin-bottom: var(--spacing-lg);
+}
+
+.image-placeholder {
+    width: 230px;
+    height: 230px;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-lg);
+    color: var(--color-white);
+    font-weight: 500;
+    transition: none;
+}
+
+/* Configuración de imágenes específicas */
+.account-image {
+    background-image: url('/assets/images/gestionar_cuenta.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.groups-image {
+    background-image: url('/assets/images/grupos_familiares.png');
+    background-size: 105%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+}
+
+.calendar-image {
+    background-image: url('/assets/images/calendarios.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Títulos de opciones */
+.option-title {
+    font-size: var(--text-xl);
+    font-family: var(--font-main);
+    color: var(--color-primary);
+    margin: 0;
+    text-align: center;
+    font-weight: 400;
+    transition: color var(--transition-fast);
+}
+
+.menu-option:hover .option-title {
+    color: var(--color-secondary);
+}
+
+/* Pie del menú */
+.menu-footer {
+    position: absolute;
+    top: 530px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 48px);
+    display: flex;
+    justify-content: center;
+}
+
+/* Botón de salida */
+.btn-exit {
+    width: 278px;
+    height: 50px;
+    font-size: var(--text-2xl);
+    font-weight: 500;
+}
+
+.btn-alert {
+    background: var(--color-alert);
+    color: var(--color-white);
+    border: 2px solid var(--color-alert);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+/* Estados de foco */
+.menu-option:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+.btn-alert:focus {
+    outline: 2px solid var(--color-alert);
+    outline-offset: 2px;
+}
