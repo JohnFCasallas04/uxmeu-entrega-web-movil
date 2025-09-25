@@ -1,0 +1,63 @@
+:root {
+  /* Paleta de colores del sistema de diseño */
+  --color-primary: #5C86D6;
+  --color-secondary: #8FA8E6;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-accent: #79C7C5;
+  --color-background: #F7F9FB;
+  --color-title: #1F2933;
+  --color-body: #6B7280;
+  --color-alert: #E84B54;
+  --color-placeholder: #6B7280;
+  --color-placeholder-light: rgba(107, 114, 128, 0.25);
+
+  /* Configuración tipográfica */
+  --font-main: 'ADLaM Display', sans-serif;
+  --font-fallback: system-ui, -apple-system, sans-serif;
+
+  /* Dimensiones base para diseño 1440x929 */
+  --viewport-width: 1440px;
+  --viewport-height: 929px;
+  --content-max-width: 1200px;
+  --container-padding: 120px;
+
+  /* Sistema de espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
+  --spacing-4xl: 96px;
+
+  /* Bordes y radios */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+  --border-radius-xl: 16px;
+  --border-radius-full: 9999px;
+
+  /* Tamaños de texto */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 30px;
+  --text-4xl: 36px;
+  --text-5xl: 48px;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* Transiciones */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 350ms ease-in-out;
+}

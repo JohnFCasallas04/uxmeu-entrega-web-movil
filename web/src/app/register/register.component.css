@@ -1,0 +1,443 @@
+/* Configuración tipográfica global */
+* {
+  font-family: var(--font-main), var(--font-fallback);
+}
+
+/* Botón de navegación atrás */
+.back-btn {
+  position: absolute;
+  top: 6px;
+  left: 5px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  transition: all var(--transition-fast);
+  z-index: 10;
+  padding: 0;
+}
+
+.back-icon {
+  width: 40px;
+  height: 40px;
+  color: var(--color-title);
+}
+
+/* Encabezado de autenticación */
+.auth-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+.auth-title {
+  position: absolute;
+  top: 80px;
+  left: 120px;
+  width: 306px;
+  font-size: var(--text-5xl) !important;
+  font-family: var(--font-main);
+  color: var(--color-primary);
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  text-align: center;
+}
+
+.auth-subtitle {
+  position: absolute;
+  top: 140px;
+  left: 120px;
+  width: 306px;
+  font-size: var(--text-lg);
+  font-family: var(--font-main);
+  color: var(--color-body);
+  margin: 0;
+  text-align: center;
+}
+
+/* Contenedor del formulario */
+.auth-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+/* Campos de entrada */
+.input-field {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+}
+
+.nombres-field {
+  top: 117px;
+  left: 117px;
+}
+
+.apellidos-field {
+  top: 200px;
+  left: 117px;
+}
+
+.correo-field {
+  top: 283px;
+  left: 117px;
+}
+
+.password-field {
+  top: 366px;
+  left: 117px;
+}
+
+.form-input {
+  width: 312px;
+  height: 56px;
+  padding: 16px 48px 16px 16px;
+  border: 2px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  font-size: var(--text-base);
+  font-family: var(--font-main);
+  background: var(--color-background);
+  transition: all 0.2s ease-in-out;
+  box-sizing: border-box;
+}
+
+.form-input::placeholder {
+  color: var(--color-placeholder-light);
+  font-size: var(--text-base);
+}
+
+.form-label {
+  position: absolute;
+  left: 12px;
+  top: 0;
+  transform: translateY(-50%);
+  font-size: var(--text-base);
+  color: var(--color-body);
+  font-family: var(--font-main);
+  background: var(--color-background);
+  padding: 0 4px;
+  pointer-events: none;
+  transition: all 0.2s ease-in-out;
+  font-weight: 400;
+}
+
+/* Estados de foco */
+.form-input:focus + .form-label {
+  color: var(--color-primary);
+  font-weight: 500;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 1px var(--color-primary);
+}
+
+/* Clear input button */
+.clear-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--color-accent); /* Accent color border */
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease-in-out;
+  padding: 0;
+  margin: 0;
+}
+
+.clear-btn.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.clear-btn:hover {
+  background: var(--color-accent); /* Accent color background on hover */
+  color: var(--color-white);
+}
+
+.clear-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--color-accent); /* Accent color */
+  transition: color 0.2s ease-in-out;
+}
+
+.clear-btn:hover .clear-icon {
+  color: var(--color-white);
+}
+
+/* Form options */
+.form-options {
+  position: absolute;
+  top: 430px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+  width: 312px;
+  display: flex;
+  justify-content: center; /* Center the link */
+  align-items: center;
+  margin: 0; /* Remove margins for absolute positioning */
+  text-align: center;
+  z-index: 5;
+}
+
+.form-options span {
+  margin: 0 auto; /* Center the span */
+}
+
+.checkbox-container {
+  position: absolute;
+  top: 435px; /* Absolute coordinate on card */
+  left: 117px; /* Absolute coordinate on card */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  cursor: pointer;
+  z-index: 5;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--color-primary);
+}
+
+.checkbox-label {
+  font-size: var(--text-sm);
+  color: var(--color-body);
+  user-select: none;
+}
+
+.forgot-link {
+  position: absolute;
+  top: 440px; /* Absolute coordinate on card */
+  left: 250px; /* Absolute coordinate on card */
+  font-size: var(--text-sm);
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+  cursor: pointer;
+  display: inline; /* Solo el texto es clickeable */
+  z-index: 5;
+}
+
+.forgot-link:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+/* Primary button */
+.btn-full {
+  position: absolute;
+  top: 467px; /* Absolute coordinate on card */
+  left: 134px; /* Absolute coordinate on card */
+  width: 278px; /* Specific 278px width */
+  height: 50px; /* Specific 50px height */
+  font-size: var(--text-2xl); /* 24px */
+  font-weight: 500;
+  margin: 0;
+  z-index: 10;
+}
+
+/* Authentication footer */
+.auth-footer {
+  position: absolute;
+  top: 550px; /* Absolute coordinate on card */
+  left: 50px; /* Absolute coordinate on card */
+  width: 446px; /* Card width minus padding */
+  text-align: center;
+  margin: 0; /* Remove margins for absolute positioning */
+  padding: var(--spacing-lg) 0 0 0; /* Only top padding */
+  border-top: 1px solid rgba(107, 114, 128, 0.1);
+  z-index: 5;
+}
+
+.auth-footer p {
+  margin: 0;
+  font-size: var(--text-sm);
+}
+
+.auth-footer a {
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Information panel */
+.auth-info {
+  position: absolute;
+  top: 0; /* Absolute coordinate on card */
+  left: 0; /* Absolute coordinate on card */
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-4xl);
+  color: var(--color-white);
+  z-index: 1;
+}
+
+.info-content {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Perfect center */
+  max-width: 400px;
+  text-align: center;
+}
+
+.info-content h2 {
+  color: var(--color-white);
+  font-size: var(--text-3xl);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 400;
+}
+
+.info-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: var(--text-lg);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-3xl);
+}
+
+/* Feature list */
+.feature-list {
+  position: absolute;
+  top: 200px; /* Absolute coordinate within info panel */
+  left: 50px; /* Absolute coordinate within info panel */
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.feature-item {
+  position: relative; /* Relative to feature-list */
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  font-size: var(--text-base);
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.feature-icon {
+  position: absolute;
+  left: 0; /* Absolute positioning within feature-item */
+  font-size: var(--text-xl);
+  width: 32px;
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .auth-container {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .auth-info {
+    order: -1;
+    padding: var(--spacing-3xl) var(--spacing-xl);
+  }
+  
+  .info-content h2 {
+    font-size: var(--text-2xl);
+  }
+  
+  .info-content p {
+    font-size: var(--text-base);
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-card {
+    padding: var(--spacing-xl);
+  }
+  
+  .auth-title {
+    font-size: var(--text-3xl);
+  }
+  
+  .form-options {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+  }
+  
+  .feature-list {
+    gap: var(--spacing-md);
+  }
+  
+  .feature-item {
+    font-size: var(--text-sm);
+  }
+}
+
+/* Animations */
+.auth-card {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.auth-info {
+  animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enhanced focus states */
+.form-input:focus,
+.checkbox:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Hover effects - usando estilos globales */

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+  <item
+    android:id="@+id/listAlarms"
+    android:checked="false"
+    android:icon="@drawable/alarm_clock"
+    android:title="Alarmas" />
+  <item
+    android:id="@+id/gesCal"
+    android:title="Ges. calendario"
+    android:icon="@drawable/calendar"/>
+</menu>

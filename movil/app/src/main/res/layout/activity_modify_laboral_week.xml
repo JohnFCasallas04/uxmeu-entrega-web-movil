@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ModifyLaboralWeek">
+
+  <LinearLayout
+    android:id="@+id/titleModifyWeek"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="32dp"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+      android:id="@+id/modifyWeekLogo"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight=".6"
+      android:clickable="false"
+      android:scaleType="fitEnd"
+      app:srcCompat="@drawable/calendar_work" />
+
+    <TextView
+      android:id="@+id/modifyWeekTitle"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center_vertical"
+      android:text="Días Laborales"
+      android:textAlignment="center"
+      android:textSize="22sp" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/listWeekDays"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="48dp"
+    android:orientation="horizontal"
+    android:weightSum="7"
+    app:layout_constraintTop_toBottomOf="@id/titleModifyWeek"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+      android:id="@+id/Lunes"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="L"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+    <!-- Añadir el Lineal Layout vertical para el boton de cerrar sesion y el texto de cerrar sesion -->
+    <TextView
+      android:id="@+id/martes"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="M"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+    <TextView
+      android:id="@+id/miercoles"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="X"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+    <TextView
+      android:id="@+id/jueves"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="J"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+    <TextView
+      android:id="@+id/viernes"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="V"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+    <TextView
+      android:id="@+id/sabado"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="S"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+    <TextView
+      android:id="@+id/domingo"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_marginStart="10dp"
+      android:layout_weight="1"
+      android:gravity="center"
+      android:text="D"
+      android:textAlignment="textStart"
+      android:textSize="20sp" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/checkWeekDays"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="48dp"
+    android:orientation="horizontal"
+    android:weightSum="7"
+    app:layout_constraintTop_toBottomOf="@id/listWeekDays"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <CheckBox
+      android:id="@+id/checkLunes"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+
+    <CheckBox
+      android:id="@+id/checkMartes"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+
+    <CheckBox
+      android:id="@+id/checkMiercoles"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+
+    <CheckBox
+      android:id="@+id/checkJueves"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+
+    <CheckBox
+      android:id="@+id/checkViernes"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+
+    <CheckBox
+      android:id="@+id/checkSabado"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+
+    <CheckBox
+      android:id="@+id/checkDomingo"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_weight="1" />
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/helperText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="48dp"
+    android:text="Seleccione sus dias laborales"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/checkWeekDays" />
+
+  <!-- Botones -->
+  <LinearLayout
+    android:id="@+id/createAccountBtnSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="48dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="2"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+      android:id="@+id/modifyBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:backgroundTint="@color/color_principal"
+      android:text="Guardar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      app:cornerRadius="50dp" />
+
+    <Button
+      android:id="@+id/cancelBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:backgroundTint="@color/color_alerta"
+      android:text="Regresar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      app:cornerRadius="50dp" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,41 @@
+/* Contenedor de tarjeta reutilizable */
+.card-container {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 546px 1fr;
+  grid-template-rows: 160px 610px 1fr;
+  background: var(--color-white);
+}
+
+.card {
+  grid-column: 2;
+  grid-row: 2;
+  width: 546px;
+  height: 610px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--spacing-3xl);
+  border: 1px solid #5C86D6;
+  border-radius: 0;
+  background: #F7F9FB;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+}
+
+/* Estilos globales para contenido de tarjeta */
+::ng-deep .auth-title {
+  font-size: var(--text-5xl);
+  font-family: var(--font-main);
+  font-weight: 400;
+  color: var(--color-primary);
+  margin-bottom: var(--spacing-sm);
+  text-align: center;
+}
+
+/* Tipografía global */
+::ng-deep .card * {
+  font-family: var(--font-main), var(--font-fallback);
+}

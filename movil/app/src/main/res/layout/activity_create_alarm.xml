@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateAlarm">
+
+  <LinearLayout
+    android:id="@+id/titleCreateAlarm"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="32dp"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+      android:id="@+id/createAlarmLogo"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight=".8"
+      android:clickable="false"
+      android:scaleType="fitEnd"
+      app:srcCompat="@drawable/alarm_clock" />
+
+    <TextView
+      android:id="@+id/createAccountTitle"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight="1"
+      android:gravity="center_vertical"
+      android:text="Crear Alarma"
+      android:textAlignment="center"
+      android:textSize="24sp" />
+  </LinearLayout>
+
+  <ImageView
+    android:id="@+id/timePicker"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/titleCreateAlarm"
+    app:srcCompat="@drawable/keyboard_picker" />
+
+  <LinearLayout
+    android:id="@+id/soundOnHoliday"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/timePicker">
+
+    <TextView
+      android:id="@+id/soundHolidayTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_weight="1.6"
+      android:text="Sonar en festivo" />
+
+    <CheckBox
+      android:id="@+id/checkBox"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".4" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/country"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/soundOnHoliday">
+
+    <TextView
+      android:id="@+id/countryTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_weight="1.6"
+      android:text="Calendario país" />
+
+    <AutoCompleteTextView
+      android:id="@+id/countryList"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".4"
+      android:dropDownHeight="wrap_content"
+      android:text="España" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/repeat"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/country">
+
+    <TextView
+      android:id="@+id/repeatTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_weight="1.6"
+      android:text="Repetir" />
+
+    <AutoCompleteTextView
+      android:id="@+id/repeatLis"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".4"
+      android:dropDownHeight="wrap_content"
+      android:text="Dias Laborales" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/tono"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/repeat">
+
+    <TextView
+      android:id="@+id/TonoTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_weight="1.6"
+      android:text="Tono" />
+
+    <AutoCompleteTextView
+      android:id="@+id/autoCompleteTextView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".4"
+      android:dropDownHeight="wrap_content"
+      android:text="Amanecer" />
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/familyAlert"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/tono">
+
+    <TextView
+      android:id="@+id/familyAlertTxt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="24dp"
+      android:layout_weight="1.6"
+      android:text="Alarma familiar" />
+
+    <CheckBox
+      android:id="@+id/familyAlarmChk"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight=".4" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/createAccountBtnSection"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_margin="48dp"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/familyAlert">
+
+    <Button
+      android:id="@+id/saveAlarmBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:text="Guardar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      android:backgroundTint="@color/color_principal"
+      app:cornerRadius="50dp" />
+
+    <Button
+      android:id="@+id/cancelBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:text="Cancelar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      android:backgroundTint="@color/color_alerta"
+      app:cornerRadius="50dp" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="match_parent"
+  tools:context=".CreateAccountActivity">
+
+  <LinearLayout
+    android:id="@+id/titleCreateAccount"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:layout_margin="32dp"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <ImageView
+      android:id="@+id/createAccountLogo"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight=".8"
+      android:clickable="false"
+      android:scaleType="fitEnd"
+      app:srcCompat="@drawable/edit" />
+
+    <TextView
+      android:id="@+id/createAccountTitle"
+      android:layout_width="0dp"
+      android:layout_height="match_parent"
+      android:layout_weight=".5"
+      android:gravity="center_vertical"
+      android:text="@string/createAccountTitleText"
+      android:textAlignment="center" />
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/createAccountForm"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/titleCreateAccount">
+
+    <TextView
+      android:id="@+id/helpTextCreateAccount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/createAccountText"
+      android:textAlignment="center"
+      android:textSize="12sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayoutNombres"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="32dp"
+      android:hint="Nombres"
+      app:boxBackgroundMode="outline"
+      app:boxStrokeColor="@color/color_acentuar"
+      app:boxStrokeWidth="2dp"
+      app:hintTextColor="@color/color_acentuar">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextNombres"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Ingrese sus nombres"
+        android:textColor="@color/color_placeholder" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayoutApellidos"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="32dp"
+      android:hint="Apellidos"
+      app:boxBackgroundMode="outline"
+      app:boxStrokeColor="@color/color_acentuar"
+      app:boxStrokeWidth="2dp"
+      app:hintTextColor="@color/color_acentuar">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextApellidos"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Ingrese sus apellidos"
+        android:textColor="@color/color_placeholder" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayoutCorreo"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="32dp"
+      android:hint="Correo"
+      app:boxBackgroundMode="outline"
+      app:boxStrokeColor="@color/color_acentuar"
+      app:boxStrokeWidth="2dp"
+      app:hintTextColor="@color/color_acentuar">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextCorreo"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:text="Ingrese su correo"
+        android:textColor="@color/color_placeholder" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+      android:id="@+id/textInputLayoutClave"
+      style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="32dp"
+      android:hint="Contraseña"
+      app:boxBackgroundMode="outline"
+      app:boxStrokeColor="@color/color_acentuar"
+      app:boxStrokeWidth="2dp"
+      app:hintTextColor="@color/color_acentuar">
+
+      <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputEditTextClave"
+        style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="text"
+        android:password="true"
+        android:text="Ingrese su contraseña"
+        android:textColor="@color/color_placeholder" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+  </LinearLayout>
+
+  <LinearLayout
+    android:id="@+id/createAccountBtnSection"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_margin="48dp"
+    android:orientation="horizontal"
+    android:weightSum="2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/createAccountForm">
+
+    <Button
+      android:id="@+id/registerBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:text="Registrar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      android:backgroundTint="@color/color_principal"
+      app:cornerRadius="50dp" />
+
+    <Button
+      android:id="@+id/cancelBtn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:text="Cancelar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      android:backgroundTint="@color/color_alerta"
+      app:cornerRadius="50dp" />
+  </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

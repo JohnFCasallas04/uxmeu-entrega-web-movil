@@ -1,0 +1,40 @@
+<div class="menu-container">
+  <div class="menu-scale">     <!-- wrapper para escalar -->
+    <div class="menu-card">
+      <header class="menu-header">
+        <h1 class="menu-title">{{labels[0]?.TituloMenuPrincipal}}</h1>
+      </header>
+
+      <div class="menu-content">
+        <div class="menu-options">
+          <div class="menu-option" (click)="navigateToGestionCuenta()">
+            <div class="option-image-placeholder">
+              <div class="image-placeholder account-image"></div>
+            </div>
+            <h3 class="option-title">{{labels[0]?.GestionCuenta}}</h3>
+          </div>
+
+          <div class="menu-option" (click)="navigateToGestionGrupos()">
+            <div class="option-image-placeholder">
+              <div class="image-placeholder groups-image"></div>
+            </div>
+            <h3 class="option-title">{{labels[0]?.GestionGrupoFamiliar}}</h3>
+          </div>
+
+          <div class="menu-option" (click)="navigateToGestionCalendario()">
+            <div class="option-image-placeholder">
+              <div class="image-placeholder calendar-image"></div>
+            </div>
+            <h3 class="option-title">{{labels[0]?.GestionCalendario}}</h3>
+          </div>
+        </div>
+      </div>
+
+      <footer class="menu-footer">
+        <button type="button" class="btn btn-alert btn-exit" (click)="logout()">
+          {{labels[0]?.BotonSalir}}
+        </button>
+      </footer>
+    </div>
+  </div>
+</div>
