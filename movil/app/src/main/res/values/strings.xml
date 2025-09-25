@@ -8,4 +8,7 @@
   <string name="createAccountTitleText">Regístrate</string>
   <string name="createAccountText">Ingresa los datos requeridos para registrarte</string>
   <string name="resetPassText">Recuperar contraseña</string>
+  <string name="inviteMemberText">Invitar Miembro</string>
+  <string name="textoInviteMember">Invitar</string>
+  <string name="textoRegisterMember">Regresar</string>
 </resources>

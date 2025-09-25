@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".CreateAccountActivity">
+
+  <!-- Título con ícono centrados -->
+  <LinearLayout
+    android:id="@+id/titleCreateAccount"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="32dp"
+    android:gravity="center"
+    android:orientation="horizontal"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <ImageView
+      android:id="@+id/createAccountLogo"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:layout_marginEnd="8dp"
+      android:scaleType="fitCenter"
+      app:srcCompat="@drawable/edit" />
+
+    <TextView
+      android:id="@+id/createAccountTitle"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Invitar Miembro"
+      android:textColor="@android:color/black"
+      android:textSize="22sp"
+      android:textStyle="bold" />
+
+  </LinearLayout>
+
+  <!-- Input Correo ubicado en (X=20, Y=255) -->
+  <com.google.android.material.textfield.TextInputLayout
+    android:id="@+id/textResetInputLayoutCorreo"
+    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="20dp"
+    android:layout_marginTop="255dp"
+    android:layout_marginEnd="20dp"
+    android:hint="Correo"
+    app:boxBackgroundMode="outline"
+    app:boxStrokeColor="@color/color_acentuar"
+    app:boxStrokeWidth="2dp"
+    app:hintTextColor="@color/color_acentuar"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintEnd_toEndOf="parent">
+
+    <com.google.android.material.textfield.TextInputEditText
+      android:id="@+id/textResetInputEditTextCorreo"
+      style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Ingrese su correo electrónico"
+      android:inputType="textEmailAddress"
+      android:textColor="@color/color_placeholder" />
+  </com.google.android.material.textfield.TextInputLayout>
+
+  <!-- Botones -->
+  <LinearLayout
+    android:id="@+id/createAccountBtnSection"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="48dp"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:weightSum="2"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <Button
+      android:id="@+id/resetPassBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:backgroundTint="@color/color_principal"
+      android:text="Invitar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      app:cornerRadius="50dp" />
+
+    <Button
+      android:id="@+id/cancelBtn"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_margin="24dp"
+      android:layout_weight="1"
+      android:backgroundTint="@color/color_alerta"
+      android:text="Regresar"
+      android:textAllCaps="false"
+      android:textColor="@color/color_fondo"
+      app:cornerRadius="50dp" />
+  </LinearLayout>
+
+  <TextView
+    android:id="@+id/Descripcion"
+    android:layout_width="229dp"
+    android:layout_height="48dp"
+    android:layout_marginTop="140dp"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:text="La persona que vaya a invitar debe estar registrada previamente en la aplicación"
+    android:textSize="12sp"
+    android:textAlignment="center"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
