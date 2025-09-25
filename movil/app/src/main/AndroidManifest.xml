@@ -10,6 +10,15 @@
     android:supportsRtl="true"
     android:theme="@style/Theme.FestivalArm">
     <activity
+      android:name=".ModifyCalendar"
+      android:exported="false" />
+    <activity
+      android:name=".ManageCalendar"
+      android:exported="false" />
+    <activity
+      android:name=".EditHolidaysActivity"
+      android:exported="false" />
+    <activity
       android:name=".CreateAlarm"
       android:exported="false" />
     <activity
