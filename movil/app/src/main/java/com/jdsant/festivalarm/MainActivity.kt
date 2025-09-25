@@ -26,11 +26,27 @@ class MainActivity : AppCompatActivity() {
 
     // Encuentra el botón por su ID
     val signUpButton = findViewById<Button>(R.id.signUpBtn)
+    val resetPassButton = findViewById<Button>(R.id.resetPassBtn)
+    val loginButton = findViewById<Button>(R.id.loginBtn)
+
+    loginButton.setOnClickListener {
+      // Crea un Intent para iniciar CreateAccountActivity
+      val intent = Intent(this, ListAlarm::class.java)
+      // Inicia la nueva actividad
+      startActivity(intent)
+    }
 
     // Configura el OnClickListener para el botón
     signUpButton.setOnClickListener {
       // Crea un Intent para iniciar CreateAccountActivity
       val intent = Intent(this, CreateAccountActivity::class.java)
+      // Inicia la nueva actividad
+      startActivity(intent)
+    }
+
+    resetPassButton.setOnClickListener { 2
+      // Crea un Intent para iniciar CreateAccountActivity
+      val intent = Intent(this, ResetPassword::class.java)
       // Inicia la nueva actividad
       startActivity(intent)
     }

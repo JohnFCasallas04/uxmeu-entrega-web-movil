@@ -7,4 +7,5 @@
   <string name="logoAppText">Logo App</string>
   <string name="createAccountTitleText">Regístrate</string>
   <string name="createAccountText">Ingresa los datos requeridos para registrarte</string>
+  <string name="resetPassText">Recuperar contraseña</string>
 </resources>
